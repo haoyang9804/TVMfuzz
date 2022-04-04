@@ -1,0 +1,10268 @@
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+te.comm_reducer_3_1_0_0
+---params---
+  ===pVar===
+  ---name---
+  fcombine
+  ---varTofunc---
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pVar===
+  ---name---
+  fidentity
+  ---varTofunc---
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pKeyword===
+  ---keywordStr---
+  name
+  ---keywordContent---
+    ===pConst===
+    ---const---
+    argmax
+    ---consts---
+    argmax 
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+---Children---
+---varobjects---
+ ===pVar===
+ ---name---
+ argmax
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+tvm.runtime.convert_1_1_0_0
+---params---
+  ===pNumber===
+  ---num---
+  1027
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+---Children---
+te.reduce_axis_1_1_0_0 relay.FuncType_4_1_0_0 te.compute_3_1_0_1 te.placeholder_3_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ n
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+te.placeholder_3_1_0_0
+---params---
+  ===pTuple===
+  ---content---
+    ===pVar===
+    ---name---
+    m
+    ---varTofunc---
+    tvm.runtime.convert_1_1_0_0 
+    ---varTocls---
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+    ===pVar===
+    ---name---
+    n
+    ---varTofunc---
+    tvm.runtime.convert_1_1_0_0 
+    ---varTocls---
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pKeyword===
+  ---keywordStr---
+  name
+  ---keywordContent---
+    ===pConst===
+    ---const---
+    A0
+    ---consts---
+    A0 A1 
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pKeyword===
+  ---keywordStr---
+  dtype
+  ---keywordContent---
+    ===pConst===
+    ---const---
+    int32
+    ---consts---
+    int32 float32 
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+tvm.runtime.convert_1_1_0_0 2
+
+---Children---
+te.compute_3_1_0_1 
+---varobjects---
+ ===pVar===
+ ---name---
+ A0
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+te.reduce_axis_1_1_0_0
+---params---
+  ===pTuple===
+  ---content---
+    ===pNumber===
+    ---num---
+    0
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+    ===pVar===
+    ---name---
+    n
+    ---varTofunc---
+    tvm.runtime.convert_1_1_0_0 
+    ---varTocls---
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+tvm.runtime.convert_1_1_0_0 1
+
+---Children---
+x5AOF.split_2_1_0_0 te.compute_3_1_0_1 
+---varobjects---
+ ===pVar===
+ ---name---
+ k
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+te.compute_3_1_0_1
+---params---
+  ===pTuple===
+  ---content---
+    ===pVar===
+    ---name---
+    m
+    ---varTofunc---
+    tvm.runtime.convert_1_1_0_0 
+    ---varTocls---
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pLambda===
+
+  ===pKeyword===
+  ---keywordStr---
+  name
+  ---keywordContent---
+    ===pConst===
+    ---const---
+    B
+    ---consts---
+    B 
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+tvm.runtime.convert_1_1_0_0 1
+te.placeholder_3_1_0_0 2
+te.reduce_axis_1_1_0_0 3
+
+---Children---
+s.rfactor_2_1_0_0 te.create_schedule_1_1_0_0 SJim9.compute_at_2_0_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ bP8KL
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+te.create_schedule_1_1_0_0
+---params---
+  ===pSubs===
+  ---fullstr---
+  bP8KL[0]
+  ---subsTosubs---
+  ---restname---
+  .op
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+te.compute_3_1_0_1 1
+
+---Children---
+s.rfactor_2_1_0_0 SJim9.compute_at_2_0_0_0 WdvWb.split_2_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ s
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+x5AOF.split_2_1_0_0
+---params---
+  ===pVar===
+  ---name---
+  k
+  ---varTofunc---
+  te.reduce_axis_1_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pKeyword===
+  ---keywordStr---
+  factor
+  ---keywordContent---
+    ===pNumber===
+    ---num---
+    16
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+te.reduce_axis_1_1_0_0 1
+
+---Children---
+s.rfactor_2_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ vDOMD
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+s.rfactor_2_1_0_0
+---params---
+  ===pSubs===
+  ---fullstr---
+  bP8KL[0]
+  ---subsTosubs---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pSubs===
+  ---fullstr---
+  vDOMD[1]
+  ---subsTosubs---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+te.create_schedule_1_1_0_0 1
+te.compute_3_1_0_1 1
+x5AOF.split_2_1_0_0 1
+
+---Children---
+---varobjects---
+ ===pVar===
+ ---name---
+ sNPDy
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+WdvWb.split_2_1_0_0
+---params---
+  ===pSubs===
+  ---fullstr---
+  ge0DH.op.axis[0]
+  ---subsTosubs---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pKeyword===
+  ---keywordStr---
+  factor
+  ---keywordContent---
+    ===pNumber===
+    ---num---
+    16
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+te.create_schedule_1_1_0_0 1
+
+---Children---
+u4oWN.bind_2_0_0_0 HdriJ.bind_2_0_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ rYODO
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+te.thread_axis_1_1_0_0
+---params---
+  ===pConst===
+  ---const---
+  blockIdx.x
+  ---consts---
+  threadIdx.x blockIdx.x threadIdx.y 
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+---Children---
+hCA6v.bind_2_0_0_0 u4oWN.bind_2_0_0_0 thread_x.var.equal_1_1_0_0 HdriJ.bind_2_0_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ WRoOH
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+u4oWN.bind_2_0_0_0
+---params---
+  ===pSubs===
+  ---fullstr---
+  rYODO[0]
+  ---subsTosubs---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pVar===
+  ---name---
+  WRoOH
+  ---varTofunc---
+  te.thread_axis_1_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+WdvWb.split_2_1_0_0 1
+te.thread_axis_1_1_0_0 1
+
+---Children---
+---varobjects---
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+HdriJ.bind_2_0_0_0
+---params---
+  ===pSubs===
+  ---fullstr---
+  rYODO[1]
+  ---subsTosubs---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pVar===
+  ---name---
+  Zxn2K
+  ---varTofunc---
+  te.thread_axis_1_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+WdvWb.split_2_1_0_0 1
+te.thread_axis_1_1_0_0 1
+
+---Children---
+---varobjects---
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+hCA6v.bind_2_0_0_0
+---params---
+  ===pSubs===
+  ---fullstr---
+  YXZpK.op.reduce_axis[0]
+  ---subsTosubs---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pVar===
+  ---name---
+  thread_x
+  ---varTofunc---
+  te.thread_axis_1_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+te.thread_axis_1_1_0_0 1
+
+---Children---
+---varobjects---
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+SJim9.compute_at_2_0_0_0
+---params---
+  ===pSubs===
+  ---fullstr---
+  s[B0]
+  ---subsTosubs---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pSubs===
+  ---fullstr---
+  YXZpK.op.reduce_axis[0]
+  ---subsTosubs---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+te.create_schedule_1_1_0_0 1
+te.compute_3_1_0_1 1
+
+---Children---
+---varobjects---
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+thread_x.var.equal_1_1_0_0
+---params---
+  ===pNumber===
+  ---num---
+  0
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+te.thread_axis_1_1_0_0 1
+
+---Children---
+YxqR7.set_store_predicate_1_0_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ NQ21q
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+YxqR7.set_store_predicate_1_0_0_0
+---params---
+  ===pVar===
+  ---name---
+  NQ21q
+  ---varTofunc---
+  thread_x.var.equal_1_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+thread_x.var.equal_1_1_0_0 1
+
+---Children---
+---varobjects---
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+check_target_1_0_0_0
+---params---
+  ===pConst===
+  ---const---
+  cuda
+  ---consts---
+  vulkan rocm cuda 
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+---Children---
+---varobjects---
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+before_0_1_0_0
+---params---
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+---Children---
+run_opt_pass_2_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ z
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+transform.SimplifyExpr_0_1_0_0
+---params---
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+---Children---
+run_opt_pass_2_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ xzzkq
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+run_opt_pass_2_1_0_0
+---params---
+  ===pVar===
+  ---name---
+  z
+  ---varTofunc---
+  relay.Function_2_1_0_0 expected_0_1_0_0 symbolic_0_1_0_0 before_0_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pVar===
+  ---name---
+  xzzkq
+  ---varTofunc---
+  transform.ToBasicBlockNormalForm_0_1_0_0 transform.AlterOpLayout_0_1_0_0 transform.SimplifyExpr_0_1_0_0 transform.InferType_0_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+before_0_1_0_0 1
+transform.SimplifyExpr_0_1_0_0 1
+expected_0_1_0_0 1
+transform.InferType_0_1_0_0 1
+symbolic_0_1_0_0 1
+relay.Function_2_1_0_0 1
+transform.AlterOpLayout_0_1_0_0 1
+transform.ToBasicBlockNormalForm_0_1_0_0 1
+
+---Children---
+check_basic_block_normal_form_1_0_0_0 analysis.get_total_mac_number_1_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ zz
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+expected_0_1_0_0
+---params---
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+---Children---
+run_opt_pass_2_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ ouhBb
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+transform.InferType_0_1_0_0
+---params---
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+---Children---
+tvm.transform.Sequential_1_1_0_0 run_opt_pass_2_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ GjzkT
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+symbolic_0_1_0_0
+---params---
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+---Children---
+run_opt_pass_2_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ z
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+relay.TensorType_2_1_0_0
+---params---
+  ===pTuple===
+  ---content---
+    ===pNumber===
+    ---num---
+    1
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+    ===pNumber===
+    ---num---
+    4
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+    ===pNumber===
+    ---num---
+    1
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pConst===
+  ---const---
+  float32
+  ---consts---
+  int32 int64 float32 
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+---Children---
+relay.Function_3_1_0_0 relay.Var_2_1_0_0 relay.var_2_1_0_0 relay.Function_4_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ PVVSd
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+relay.var_2_1_0_0
+---params---
+  ===pConst===
+  ---const---
+  x
+  ---consts---
+  weight_conv data y n weight_dense x weight_depthwiseconv data2 data1 
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pVar===
+  ---name---
+  PVVSd
+  ---varTofunc---
+  relay.TensorType_2_1_0_0 relay.scalar_type_1_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+relay.TensorType_2_1_0_0 1
+relay.scalar_type_1_1_0_0 1
+
+---Children---
+relay.equal_2_1_0_0 relay.subtract_2_1_425_0 relay.Call_2_1_0_0 sb.ret_1_0_421_0 relay.ones_like_1_1_0_0 relay.log_1_1_426_0 relay.nn.dense_2_1_0_0 relay.squeeze_1_1_0_0 relay.squeeze_2_1_0_0 relay.nn.conv2d_5_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ x
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+relay.squeeze_2_1_0_0
+---params---
+  ===pVar===
+  ---name---
+  x
+  ---varTofunc---
+  relay.var_2_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pKeyword===
+  ---keywordStr---
+  axis
+  ---keywordContent---
+    ===pTuple===
+    ---content---
+      ===pNumber===
+      ---num---
+      2
+      ---restname---
+      
+      ---surround---
+      ---Parents---
+      ---Children---
+      ---varobjects---
+
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+relay.var_2_1_0_0 1
+
+---Children---
+run_infer_type_1_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ y
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+run_infer_type_1_1_0_0
+---params---
+  ===pVar===
+  ---name---
+  y
+  ---varTofunc---
+  relay.squeeze_2_1_0_0 relay.Function_3_1_0_0 sb.get_0_1_0_0 relay.squeeze_1_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+relay.squeeze_2_1_0_0 1
+relay.squeeze_1_1_0_0 1
+sb.get_0_1_0_0 1
+relay.Function_3_1_0_0 1
+
+---Children---
+---varobjects---
+ ===pVar===
+ ---name---
+ yy
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+relay.squeeze_1_1_0_0
+---params---
+  ===pVar===
+  ---name---
+  x
+  ---varTofunc---
+  relay.var_2_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+relay.var_2_1_0_0 1
+
+---Children---
+run_infer_type_1_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ y
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+verify_full_3_0_0_0
+---params---
+  ===pNumber===
+  ---num---
+  4
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pTuple===
+  ---content---
+    ===pNumber===
+    ---num---
+    1
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+    ===pNumber===
+    ---num---
+    3
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+    ===pNumber===
+    ---num---
+    4
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+    ===pNumber===
+    ---num---
+    4
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pConst===
+  ---const---
+  int32
+  ---consts---
+  int32 float32 
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+---Children---
+---varobjects---
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+get_mod_0_1_0_0
+---params---
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+---Children---
+dnzBB_1_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ mod
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+relay.transform.Inline_0_1_0_0
+---params---
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+---Children---
+dnzBB_1_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ dnzBB
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+dnzBB_1_1_0_0
+---params---
+  ===pVar===
+  ---name---
+  mod
+  ---varTofunc---
+  get_mod_0_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+relay.transform.Inline_0_1_0_0 1
+get_mod_0_1_0_0 1
+
+---Children---
+---varobjects---
+ ===pVar===
+ ---name---
+ mod
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+relay.var_1_1_0_0
+---params---
+  ===pConst===
+  ---const---
+  x
+  ---consts---
+  f x v1 
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+---Children---
+relay.Call_2_1_0_0 relay.add_2_1_0_0 relay.Let_3_1_0_0 relay.multiply_2_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ x
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+relay.add_2_1_0_0
+---params---
+  ===pVar===
+  ---name---
+  x
+  ---varTofunc---
+  relay.var_3_1_0_0 relay.add_2_1_0_0 relay.Var_1_1_0_0 relay.nn.conv2d_5_1_0_0 relay.var_1_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pVar===
+  ---name---
+  x
+  ---varTofunc---
+  relay.const_2_1_0_0 relay.add_2_1_0_0 relay.var_3_1_0_0 relay.nn.conv2d_5_1_0_0 relay.var_1_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+relay.var_1_1_0_0 2
+relay.add_2_1_0_0 2
+relay.var_3_1_0_0 2
+relay.const_2_1_0_0 1
+relay.nn.conv2d_5_1_0_0 2
+relay.Var_1_1_0_0 1
+
+---Children---
+relay.add_2_1_0_0 relay.Let_3_1_0_0 relay.nn.batch_flatten_1_1_0_0 relay.Function_2_1_0_0 check_basic_block_normal_form_1_0_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ y
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+check_basic_block_normal_form_1_0_0_0
+---params---
+  ===pVar===
+  ---name---
+  z
+  ---varTofunc---
+  run_opt_pass_2_1_0_0 relay.Function_2_1_0_0 relay.add_2_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+relay.add_2_1_0_0 1
+relay.Function_2_1_0_0 1
+run_opt_pass_2_1_0_0 1
+
+---Children---
+---varobjects---
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+relay.var_3_1_0_0
+---params---
+  ===pConst===
+  ---const---
+  x
+  ---consts---
+  in_3 in_2 in_1 s x i y in_4 
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pKeyword===
+  ---keywordStr---
+  shape
+  ---keywordContent---
+    ===pTuple===
+    ---content---
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+    ===pTuple===
+    ---content---
+      ===pNumber===
+      ---num---
+      1
+      ---restname---
+      
+      ---surround---
+      ---Parents---
+      ---Children---
+      ---varobjects---
+
+      ===pNumber===
+      ---num---
+      4
+      ---restname---
+      
+      ---surround---
+      ---Parents---
+      ---Children---
+      ---varobjects---
+
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+    ===pTuple===
+    ---content---
+      ===pNumber===
+      ---num---
+      1
+      ---restname---
+      
+      ---surround---
+      ---Parents---
+      ---Children---
+      ---varobjects---
+
+      ===pNumber===
+      ---num---
+      4
+      ---restname---
+      
+      ---surround---
+      ---Parents---
+      ---Children---
+      ---varobjects---
+
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+    ===pList===
+    ---content---
+    ---mutable---
+    True
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+    ===pTuple===
+    ---content---
+      ===pNumber===
+      ---num---
+      10
+      ---restname---
+      
+      ---surround---
+      ---Parents---
+      ---Children---
+      ---varobjects---
+
+      ===pNumber===
+      ---num---
+      10
+      ---restname---
+      
+      ---surround---
+      ---Parents---
+      ---Children---
+      ---varobjects---
+
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+    ===pTuple===
+    ---content---
+      ===pNumber===
+      ---num---
+      10
+      ---restname---
+      
+      ---surround---
+      ---Parents---
+      ---Children---
+      ---varobjects---
+
+      ===pNumber===
+      ---num---
+      10
+      ---restname---
+      
+      ---surround---
+      ---Parents---
+      ---Children---
+      ---varobjects---
+
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+    ===pTuple===
+    ---content---
+      ===pNumber===
+      ---num---
+      10
+      ---restname---
+      
+      ---surround---
+      ---Parents---
+      ---Children---
+      ---varobjects---
+
+      ===pNumber===
+      ---num---
+      10
+      ---restname---
+      
+      ---surround---
+      ---Parents---
+      ---Children---
+      ---varobjects---
+
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+    ===pTuple===
+    ---content---
+      ===pNumber===
+      ---num---
+      10
+      ---restname---
+      
+      ---surround---
+      ---Parents---
+      ---Children---
+      ---varobjects---
+
+      ===pNumber===
+      ---num---
+      10
+      ---restname---
+      
+      ---surround---
+      ---Parents---
+      ---Children---
+      ---varobjects---
+
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pKeyword===
+  ---keywordStr---
+  dtype
+  ---keywordContent---
+    ===pConst===
+    ---const---
+    float32
+    ---consts---
+    int32 uint8 float32 
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+---Children---
+relay.add_2_1_0_0 relay.equal_2_1_0_0 relay.subtract_2_1_0_0 relay.Function_2_1_0_0 relay.Function_3_1_0_0 relay.qnn.op.mul_8_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ x
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+relay.const_2_1_0_0
+---params---
+  ===pNumber===
+  ---num---
+  1
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pKeyword===
+  ---keywordStr---
+  dtype
+  ---keywordContent---
+    ===pConst===
+    ---const---
+    float32
+    ---consts---
+    int32 float32 
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+---Children---
+f_1_1_0_0 relay.add_2_1_0_0 relay.equal_2_1_0_0 sb.let_2_1_0_0 relay.multiply_2_1_0_0 relay.subtract_2_1_0_0 relay.qnn.op.mul_8_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ one
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+relay.equal_2_1_0_0
+---params---
+  ===pVar===
+  ---name---
+  x
+  ---varTofunc---
+  relay.var_3_1_0_0 relay.Var_2_1_0_0 relay.var_2_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pVar===
+  ---name---
+  two
+  ---varTofunc---
+  relay.const_2_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+relay.var_3_1_0_0 1
+relay.const_2_1_0_0 1
+relay.Var_2_1_0_0 1
+relay.var_2_1_0_0 1
+
+---Children---
+sb.if_scope_1_1_0_0 relay.If_3_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ v2
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+relay.multiply_2_1_0_0
+---params---
+  ===pVar===
+  ---name---
+  v1
+  ---varTofunc---
+  relay.var_1_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pVar===
+  ---name---
+  two
+  ---varTofunc---
+  relay.const_2_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+relay.var_1_1_0_0 1
+relay.const_2_1_0_0 1
+
+---Children---
+relay.If_3_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ true_branch
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+relay.If_3_1_0_0
+---params---
+  ===pVar===
+  ---name---
+  v2
+  ---varTofunc---
+  relay.equal_2_1_0_0 f_0_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pVar===
+  ---name---
+  true_branch
+  ---varTofunc---
+  relay.Function_2_1_0_0 relay.multiply_2_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pVar===
+  ---name---
+  false_branch
+  ---varTofunc---
+  relay.Function_2_1_0_0 relay.multiply_2_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+relay.equal_2_1_0_0 1
+relay.multiply_2_1_0_0 2
+f_0_1_0_0 1
+relay.Function_2_1_0_0 2
+
+---Children---
+relay.Function_2_1_0_0 relay.Let_3_1_0_0 relay.Function_4_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ body
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+relay.Let_3_1_0_0
+---params---
+  ===pVar===
+  ---name---
+  v1
+  ---varTofunc---
+  relay.var_1_1_0_0 relay.Var_1_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pVar===
+  ---name---
+  XKjtj
+  ---varTofunc---
+  relay.Tuple_1_1_0_0 relay.add_2_1_0_0 relay.const_1_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pVar===
+  ---name---
+  body
+  ---varTofunc---
+  relay.Tuple_1_1_0_0 relay.If_3_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+relay.var_1_1_0_0 1
+relay.add_2_1_0_0 1
+relay.If_3_1_0_0 1
+relay.Var_1_1_0_0 1
+relay.Tuple_1_1_0_0 2
+relay.const_1_1_0_0 1
+
+---Children---
+assert_parses_as_2_0_0_0 relay.Function_2_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ body
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+relay.Function_2_1_0_0
+---params---
+  ===pList===
+  ---content---
+    ===pVar===
+    ---name---
+    x
+    ---varTofunc---
+    relay.var_3_1_0_0 
+    ---varTocls---
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---mutable---
+  False
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pVar===
+  ---name---
+  body
+  ---varTofunc---
+  relay.Tuple_1_1_0_0 relay.add_2_1_0_0 sb.get_0_1_0_0 relay.qnn.op.mul_8_1_0_0 relay.Let_3_1_0_0 relay.If_3_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+ ===pVar===
+ ---name---
+ QLSFW
+ ---varTofunc---
+ relay.Function_2_1_0_0 
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+  ===pSubs===
+  ---fullstr---
+  mod['g1']
+  ---subsTosubs---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+ ===pVar===
+ ---name---
+ iRjTr
+ ---varTofunc---
+ relay.Function_2_1_0_0 
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+  ===pSubs===
+  ---fullstr---
+  mod[f]
+  ---subsTosubs---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+ ===pVar===
+ ---name---
+ y
+ ---varTofunc---
+ relay.Function_2_1_0_0 
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+  ===pSubs===
+  ---fullstr---
+  mod['main']
+  ---subsTosubs---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---restname---
+
+---surround---
+---Parents---
+relay.var_3_1_0_0 1
+relay.Let_3_1_0_0 1
+relay.qnn.op.mul_8_1_0_0 1
+relay.Tuple_1_1_0_0 1
+relay.add_2_1_0_0 1
+relay.If_3_1_0_0 1
+sb.get_0_1_0_0 1
+
+---Children---
+tvm.IRModule.from_expr_1_1_0_0 run_opt_pass_2_1_0_0 ex.evaluate_1_1_0_0 check_basic_block_normal_form_1_0_0_0 relay.If_3_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ func
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+relay.scalar_type_1_1_0_0
+---params---
+  ===pConst===
+  ---const---
+  int32
+  ---consts---
+  bool int32 float32 
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+---Children---
+relay.Var_2_1_0_0 relay.FuncType_2_1_0_0 relay.var_2_1_0_0 relay.const_2_1_424_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ int32
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+relay.Var_1_1_0_0
+---params---
+  ===pConst===
+  ---const---
+  _
+  ---consts---
+  z y x _ 
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+---Children---
+relay.add_2_1_0_0 relay.Let_3_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ _
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+relay.Var_2_1_0_0
+---params---
+  ===pConst===
+  ---const---
+  x
+  ---consts---
+  f y x n 
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pVar===
+  ---name---
+  int32
+  ---varTofunc---
+  relay.scalar_type_1_1_0_0 relay.TensorType_2_1_0_0 relay.FuncType_2_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+relay.scalar_type_1_1_0_0 1
+relay.TensorType_2_1_0_0 1
+relay.FuncType_2_1_0_0 1
+
+---Children---
+f_1_1_0_0 relay.Function_4_1_0_0 relay.equal_2_1_0_0 f_0_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ X_ANNO
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+relay.Tuple_1_1_0_0
+---params---
+  ===pList===
+  ---content---
+  ---mutable---
+  True
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+---Children---
+relay.Function_2_1_0_0 relay.Let_3_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ UNIT
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+assert_parses_as_2_0_0_0
+---params---
+  ===pConst===
+  ---const---
+  (); ()
+  ---consts---
+  (); () let %_ = 1; () 
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pVar===
+  ---name---
+  GhHqo
+  ---varTofunc---
+  relay.Let_3_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+relay.Let_3_1_0_0 1
+
+---Children---
+---varobjects---
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+relay.const_1_1_0_0
+---params---
+  ===pNumber===
+  ---num---
+  1
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+---Children---
+relay.Let_3_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ Acq2k
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+tvm.IRModule_0_1_0_0
+---params---
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+ ===pVar===
+ ---name---
+ extern_def
+ ---varTofunc---
+ relay.TypeData_3_1_0_0 
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+  ===pSubs===
+  ---fullstr---
+  mod[extern_var]
+  ---subsTosubs---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+ ===pVar===
+ ---name---
+ value
+ ---varTofunc---
+ relay.Function_4_1_0_0 
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+  ===pSubs===
+  ---fullstr---
+  mod[f]
+  ---subsTosubs---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+ ===pVar===
+ ---name---
+ iRjTr
+ ---varTofunc---
+ relay.Function_2_1_0_0 
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+  ===pSubs===
+  ---fullstr---
+  mod[f]
+  ---subsTosubs---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+ ===pVar===
+ ---name---
+ y
+ ---varTofunc---
+ relay.Function_2_1_0_0 
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+  ===pSubs===
+  ---fullstr---
+  mod['main']
+  ---subsTosubs---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---restname---
+
+---surround---
+---Parents---
+---Children---
+check_eval_3_0_0_0 assert_parse_module_as_2_0_0_0 PXj7r_1_1_0_0 ex.evaluate_1_1_0_0 y0AIG_1_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ mod
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+relay.GlobalTypeVar_1_1_0_0
+---params---
+  ===pConst===
+  ---const---
+  T
+  ---consts---
+  T gtv1 
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+ ===pVar===
+ ---name---
+ extern_def
+ ---varTofunc---
+ relay.TypeData_3_1_0_0 
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+  ===pSubs===
+  ---fullstr---
+  mod[extern_var]
+  ---subsTosubs---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---restname---
+
+---surround---
+---Parents---
+---Children---
+relay.TypeCall_2_1_0_0 relay.TypeData_3_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ extern_var
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+relay.TypeVar_1_1_0_0
+---params---
+  ===pConst===
+  ---const---
+  A
+  ---consts---
+  A 
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+---Children---
+relay.TypeData_3_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ typ_var
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+relay.TypeData_3_1_0_0
+---params---
+  ===pVar===
+  ---name---
+  extern_var
+  ---varTofunc---
+  relay.GlobalTypeVar_1_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pList===
+  ---content---
+    ===pVar===
+    ---name---
+    typ_var
+    ---varTofunc---
+    relay.TypeVar_1_1_0_0 
+    ---varTocls---
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---mutable---
+  False
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pList===
+  ---content---
+  ---mutable---
+  True
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+ ===pVar===
+ ---name---
+ extern_def
+ ---varTofunc---
+ relay.TypeData_3_1_0_0 
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+  ===pSubs===
+  ---fullstr---
+  mod[extern_var]
+  ---subsTosubs---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---restname---
+
+---surround---
+---Parents---
+relay.GlobalTypeVar_1_1_0_0 1
+relay.TypeVar_1_1_0_0 1
+
+---Children---
+---varobjects---
+ ===pVar===
+ ---name---
+ extern_def
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+assert_parse_module_as_2_0_0_0
+---params---
+  ===pConst===
+  ---const---
+  
+        extern type T[A]
+        
+  ---consts---
+  
+        extern type T[A]
+         
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pVar===
+  ---name---
+  mod
+  ---varTofunc---
+  tvm.IRModule_0_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+tvm.IRModule_0_1_0_0 1
+
+---Children---
+---varobjects---
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+relay.qnn.op.mul_8_1_0_0
+---params---
+  ===pKeyword===
+  ---keywordStr---
+  lhs
+  ---keywordContent---
+    ===pVar===
+    ---name---
+    x
+    ---varTofunc---
+    relay.var_3_1_0_0 
+    ---varTocls---
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+    ===pVar===
+    ---name---
+    x
+    ---varTofunc---
+    relay.var_3_1_0_0 
+    ---varTocls---
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+    ===pVar===
+    ---name---
+    x
+    ---varTofunc---
+    relay.var_3_1_0_0 
+    ---varTocls---
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pKeyword===
+  ---keywordStr---
+  rhs
+  ---keywordContent---
+    ===pVar===
+    ---name---
+    y
+    ---varTofunc---
+    relay.var_3_1_0_0 
+    ---varTocls---
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+    ===pVar===
+    ---name---
+    y
+    ---varTofunc---
+    relay.var_3_1_0_0 
+    ---varTocls---
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+    ===pVar===
+    ---name---
+    y
+    ---varTofunc---
+    relay.var_3_1_0_0 
+    ---varTocls---
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pKeyword===
+  ---keywordStr---
+  lhs_scale
+  ---keywordContent---
+    ===pVar===
+    ---name---
+    YwUpS
+    ---varTofunc---
+    relay.const_2_1_0_0 
+    ---varTocls---
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+    ===pVar===
+    ---name---
+    GyTbg
+    ---varTofunc---
+    relay.const_2_1_0_0 
+    ---varTocls---
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+    ===pVar===
+    ---name---
+    JOwZk
+    ---varTofunc---
+    relay.const_2_1_0_0 
+    ---varTocls---
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pKeyword===
+  ---keywordStr---
+  lhs_zero_point
+  ---keywordContent---
+    ===pVar===
+    ---name---
+    Ts4W5
+    ---varTofunc---
+    relay.const_2_1_0_0 
+    ---varTocls---
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+    ===pVar===
+    ---name---
+    zjV2P
+    ---varTofunc---
+    relay.const_2_1_0_0 
+    ---varTocls---
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+    ===pVar===
+    ---name---
+    p8lZ5
+    ---varTofunc---
+    relay.const_2_1_0_0 
+    ---varTocls---
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pKeyword===
+  ---keywordStr---
+  rhs_scale
+  ---keywordContent---
+    ===pVar===
+    ---name---
+    aMJab
+    ---varTofunc---
+    relay.const_2_1_0_0 
+    ---varTocls---
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+    ===pVar===
+    ---name---
+    wBEpN
+    ---varTofunc---
+    relay.const_2_1_0_0 
+    ---varTocls---
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+    ===pVar===
+    ---name---
+    skWYQ
+    ---varTofunc---
+    relay.const_2_1_0_0 
+    ---varTocls---
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pKeyword===
+  ---keywordStr---
+  rhs_zero_point
+  ---keywordContent---
+    ===pVar===
+    ---name---
+    jXdXo
+    ---varTofunc---
+    relay.const_2_1_0_0 
+    ---varTocls---
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+    ===pVar===
+    ---name---
+    AmNlG
+    ---varTofunc---
+    relay.const_2_1_0_0 
+    ---varTocls---
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+    ===pVar===
+    ---name---
+    CYms6
+    ---varTofunc---
+    relay.const_2_1_0_0 
+    ---varTocls---
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pKeyword===
+  ---keywordStr---
+  output_scale
+  ---keywordContent---
+    ===pVar===
+    ---name---
+    ZUQ5B
+    ---varTofunc---
+    relay.const_2_1_0_0 
+    ---varTocls---
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+    ===pVar===
+    ---name---
+    gYFgm
+    ---varTofunc---
+    relay.const_2_1_0_0 
+    ---varTocls---
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+    ===pVar===
+    ---name---
+    k8USc
+    ---varTofunc---
+    relay.const_2_1_0_0 
+    ---varTocls---
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pKeyword===
+  ---keywordStr---
+  output_zero_point
+  ---keywordContent---
+    ===pVar===
+    ---name---
+    g2456
+    ---varTofunc---
+    relay.const_2_1_0_0 
+    ---varTocls---
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+    ===pVar===
+    ---name---
+    U1ybq
+    ---varTofunc---
+    relay.const_2_1_0_0 
+    ---varTocls---
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+    ===pVar===
+    ---name---
+    LC2HK
+    ---varTofunc---
+    relay.const_2_1_0_0 
+    ---varTocls---
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+relay.var_3_1_0_0 2
+relay.const_2_1_0_0 6
+
+---Children---
+relay.Function_2_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ z
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+tvm.IRModule.from_expr_1_1_0_0
+---params---
+  ===pVar===
+  ---name---
+  func
+  ---varTofunc---
+  relay.Function_2_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+relay.Function_2_1_0_0 1
+
+---Children---
+Pu7Zz_1_1_0_0 XUWy4_1_1_0_0 xrL42_1_1_0_0 dyJUf_1_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ mod
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+relay.qnn.transform.CanonicalizeOps_0_1_0_0
+---params---
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+---Children---
+Pu7Zz_1_1_0_0 XUWy4_1_1_0_0 xrL42_1_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ xrL42
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+xrL42_1_1_0_0
+---params---
+  ===pVar===
+  ---name---
+  mod
+  ---varTofunc---
+  tvm.IRModule.from_expr_1_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+relay.qnn.transform.CanonicalizeOps_0_1_0_0 1
+tvm.IRModule.from_expr_1_1_0_0 1
+
+---Children---
+intrp.evaluate_1_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ mod
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+np.array_1_1_0_0
+---params---
+  ===pTuple===
+  ---content---
+    ===pNumber===
+    ---num---
+    255
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+    ===pNumber===
+    ---num---
+    1
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+    ===pNumber===
+    ---num---
+    1
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+    ===pNumber===
+    ---num---
+    0
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+---Children---
+osJrD.reshape_1_1_0_0 L0g46.reshape_1_1_0_0 DKvyT.reshape_1_1_0_0 ueXIT.reshape_1_1_0_0 kvvKh.reshape_1_1_0_0 iFKYx.reshape_1_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ L0g46
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+L0g46.reshape_1_1_0_0
+---params---
+  ===pTuple===
+  ---content---
+    ===pNumber===
+    ---num---
+    1
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+    ===pNumber===
+    ---num---
+    4
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+np.array_1_1_0_0 1
+
+---Children---
+recover_3_1_0_0 reR9R_2_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ x_data
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+osJrD.reshape_1_1_0_0
+---params---
+  ===pTuple===
+  ---content---
+    ===pNumber===
+    ---num---
+    1
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+    ===pNumber===
+    ---num---
+    4
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+np.array_1_1_0_0 1
+
+---Children---
+recover_3_1_0_0 reR9R_2_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ y_data
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+recover_3_1_0_0
+---params---
+  ===pVar===
+  ---name---
+  x_data
+  ---varTofunc---
+  kvvKh.reshape_1_1_0_0 osJrD.reshape_1_1_0_0 L0g46.reshape_1_1_0_0 DKvyT.reshape_1_1_0_0 ueXIT.reshape_1_1_0_0 iFKYx.reshape_1_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pNumber===
+  ---num---
+  0.125
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pNumber===
+  ---num---
+  0
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+L0g46.reshape_1_1_0_0 1
+osJrD.reshape_1_1_0_0 1
+DKvyT.reshape_1_1_0_0 1
+ueXIT.reshape_1_1_0_0 1
+kvvKh.reshape_1_1_0_0 1
+iFKYx.reshape_1_1_0_0 1
+
+---Children---
+generate_golden_output_4_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ x_rec
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+generate_golden_output_4_1_0_0
+---params---
+  ===pVar===
+  ---name---
+  x_rec
+  ---varTofunc---
+  recover_3_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pVar===
+  ---name---
+  y_rec
+  ---varTofunc---
+  recover_3_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pNumber===
+  ---num---
+  0.125
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pNumber===
+  ---num---
+  0
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+recover_3_1_0_0 2
+
+---Children---
+np.uint8_1_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ golden
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+tvm.cpu_1_1_0_0
+---params---
+  ===pNumber===
+  ---num---
+  0
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+---Children---
+relay.create_executor_3_1_0_0 tvm.nd.array_2_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ sLORh
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+relay.create_executor_3_1_0_0
+---params---
+  ===pConst===
+  ---const---
+  graph
+  ---consts---
+  graph 
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pKeyword===
+  ---keywordStr---
+  ctx
+  ---keywordContent---
+    ===pVar===
+    ---name---
+    sLORh
+    ---varTofunc---
+    tvm.cpu_1_1_0_0 
+    ---varTocls---
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+    ===pVar===
+    ---name---
+    XpIB2
+    ---varTofunc---
+    tvm.cpu_1_1_0_0 
+    ---varTocls---
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+    ===pVar===
+    ---name---
+    g1XZR
+    ---varTofunc---
+    tvm.cpu_1_1_0_0 
+    ---varTocls---
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pKeyword===
+  ---keywordStr---
+  target
+  ---keywordContent---
+    ===pConst===
+    ---const---
+    llvm
+    ---consts---
+    llvm 
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+tvm.cpu_1_1_0_0 1
+
+---Children---
+intrp.evaluate_1_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ intrp
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+intrp.evaluate_1_1_0_0
+---params---
+  ===pSubs===
+  ---fullstr---
+  mod['main']
+  ---subsTosubs---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+relay.create_executor_3_1_0_0 1
+xrL42_1_1_0_0 1
+
+---Children---
+ZPgXx_2_1_0_0 reR9R_2_1_0_0 SByc6_2_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ reR9R
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+reR9R_2_1_0_0
+---params---
+  ===pVar===
+  ---name---
+  x_data
+  ---varTofunc---
+  L0g46.reshape_1_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pVar===
+  ---name---
+  y_data
+  ---varTofunc---
+  osJrD.reshape_1_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+intrp.evaluate_1_1_0_0 1
+L0g46.reshape_1_1_0_0 1
+osJrD.reshape_1_1_0_0 1
+
+---Children---
+op_res.asnumpy_0_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ op_res
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+op_res.asnumpy_0_1_0_0
+---params---
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+reR9R_2_1_0_0 1
+
+---Children---
+np.testing.assert_equal_2_0_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ keELm
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+np.uint8_1_1_0_0
+---params---
+  ===pVar===
+  ---name---
+  golden
+  ---varTofunc---
+  generate_golden_output_4_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+generate_golden_output_4_1_0_0 1
+
+---Children---
+np.testing.assert_equal_2_0_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ jcASr
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+np.testing.assert_equal_2_0_0_0
+---params---
+  ===pVar===
+  ---name---
+  keELm
+  ---varTofunc---
+  op_res.asnumpy_0_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pVar===
+  ---name---
+  jcASr
+  ---varTofunc---
+  np.uint8_1_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+op_res.asnumpy_0_1_0_0 1
+np.uint8_1_1_0_0 1
+
+---Children---
+---varobjects---
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+XUWy4_1_1_0_0
+---params---
+  ===pVar===
+  ---name---
+  mod
+  ---varTofunc---
+  tvm.IRModule.from_expr_1_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+relay.qnn.transform.CanonicalizeOps_0_1_0_0 1
+tvm.IRModule.from_expr_1_1_0_0 1
+
+---Children---
+---varobjects---
+ ===pVar===
+ ---name---
+ mod
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+DKvyT.reshape_1_1_0_0
+---params---
+  ===pTuple===
+  ---content---
+    ===pNumber===
+    ---num---
+    1
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+    ===pNumber===
+    ---num---
+    4
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+np.array_1_1_0_0 1
+
+---Children---
+ZPgXx_2_1_0_0 recover_3_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ x_data
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+ueXIT.reshape_1_1_0_0
+---params---
+  ===pTuple===
+  ---content---
+    ===pNumber===
+    ---num---
+    1
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+    ===pNumber===
+    ---num---
+    4
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+np.array_1_1_0_0 1
+
+---Children---
+ZPgXx_2_1_0_0 recover_3_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ y_data
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+ZPgXx_2_1_0_0
+---params---
+  ===pVar===
+  ---name---
+  x_data
+  ---varTofunc---
+  DKvyT.reshape_1_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pVar===
+  ---name---
+  y_data
+  ---varTofunc---
+  ueXIT.reshape_1_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+intrp.evaluate_1_1_0_0 1
+DKvyT.reshape_1_1_0_0 1
+ueXIT.reshape_1_1_0_0 1
+
+---Children---
+---varobjects---
+ ===pVar===
+ ---name---
+ op_res
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+Pu7Zz_1_1_0_0
+---params---
+  ===pVar===
+  ---name---
+  mod
+  ---varTofunc---
+  tvm.IRModule.from_expr_1_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+relay.qnn.transform.CanonicalizeOps_0_1_0_0 1
+tvm.IRModule.from_expr_1_1_0_0 1
+
+---Children---
+---varobjects---
+ ===pVar===
+ ---name---
+ mod
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+kvvKh.reshape_1_1_0_0
+---params---
+  ===pTuple===
+  ---content---
+    ===pNumber===
+    ---num---
+    1
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+    ===pNumber===
+    ---num---
+    4
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+np.array_1_1_0_0 1
+
+---Children---
+SByc6_2_1_0_0 recover_3_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ x_data
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+iFKYx.reshape_1_1_0_0
+---params---
+  ===pTuple===
+  ---content---
+    ===pNumber===
+    ---num---
+    1
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+    ===pNumber===
+    ---num---
+    4
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+np.array_1_1_0_0 1
+
+---Children---
+SByc6_2_1_0_0 recover_3_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ y_data
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+SByc6_2_1_0_0
+---params---
+  ===pVar===
+  ---name---
+  x_data
+  ---varTofunc---
+  kvvKh.reshape_1_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pVar===
+  ---name---
+  y_data
+  ---varTofunc---
+  iFKYx.reshape_1_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+intrp.evaluate_1_1_0_0 1
+kvvKh.reshape_1_1_0_0 1
+iFKYx.reshape_1_1_0_0 1
+
+---Children---
+---varobjects---
+ ===pVar===
+ ---name---
+ op_res
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+tvm.IRModule_1_1_0_0
+---params---
+  ===pDict===
+  ---keyContents---
+  ---valueContents---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+ ===pVar===
+ ---name---
+ QLSFW
+ ---varTofunc---
+ relay.Function_2_1_0_0 
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+  ===pSubs===
+  ---fullstr---
+  mod['g1']
+  ---subsTosubs---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---restname---
+
+---surround---
+---Parents---
+---Children---
+relay.analysis.CallGraph_1_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ mod
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+relay.analysis.CallGraph_1_1_0_0
+---params---
+  ===pVar===
+  ---name---
+  mod
+  ---varTofunc---
+  tvm.IRModule_1_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+tvm.IRModule_1_1_0_0 1
+
+---Children---
+---varobjects---
+ ===pVar===
+ ---name---
+ call_graph
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+relay.nn.conv2d_5_1_0_0
+---params---
+  ===pVar===
+  ---name---
+  data1
+  ---varTofunc---
+  relay.var_2_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pVar===
+  ---name---
+  weight_conv
+  ---varTofunc---
+  relay.var_2_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pKeyword===
+  ---keywordStr---
+  channels
+  ---keywordContent---
+    ===pNumber===
+    ---num---
+    64
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+    ===pNumber===
+    ---num---
+    64
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pKeyword===
+  ---keywordStr---
+  kernel_size
+  ---keywordContent---
+    ===pTuple===
+    ---content---
+      ===pNumber===
+      ---num---
+      3
+      ---restname---
+      
+      ---surround---
+      ---Parents---
+      ---Children---
+      ---varobjects---
+
+      ===pNumber===
+      ---num---
+      3
+      ---restname---
+      
+      ---surround---
+      ---Parents---
+      ---Children---
+      ---varobjects---
+
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+    ===pTuple===
+    ---content---
+      ===pNumber===
+      ---num---
+      3
+      ---restname---
+      
+      ---surround---
+      ---Parents---
+      ---Children---
+      ---varobjects---
+
+      ===pNumber===
+      ---num---
+      3
+      ---restname---
+      
+      ---surround---
+      ---Parents---
+      ---Children---
+      ---varobjects---
+
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pKeyword===
+  ---keywordStr---
+  padding
+  ---keywordContent---
+    ===pTuple===
+    ---content---
+      ===pNumber===
+      ---num---
+      1
+      ---restname---
+      
+      ---surround---
+      ---Parents---
+      ---Children---
+      ---varobjects---
+
+      ===pNumber===
+      ---num---
+      1
+      ---restname---
+      
+      ---surround---
+      ---Parents---
+      ---Children---
+      ---varobjects---
+
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+    ===pTuple===
+    ---content---
+      ===pNumber===
+      ---num---
+      1
+      ---restname---
+      
+      ---surround---
+      ---Parents---
+      ---Children---
+      ---varobjects---
+
+      ===pNumber===
+      ---num---
+      1
+      ---restname---
+      
+      ---surround---
+      ---Parents---
+      ---Children---
+      ---varobjects---
+
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+relay.var_2_1_0_0 2
+
+---Children---
+relay.add_2_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ conv2d_1
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+relay.nn.batch_flatten_1_1_0_0
+---params---
+  ===pVar===
+  ---name---
+  add
+  ---varTofunc---
+  relay.add_2_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+relay.add_2_1_0_0 1
+
+---Children---
+relay.nn.dense_2_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ flattened
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+relay.nn.dense_2_1_0_0
+---params---
+  ===pVar===
+  ---name---
+  flattened
+  ---varTofunc---
+  relay.nn.batch_flatten_1_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pVar===
+  ---name---
+  weight_dense
+  ---varTofunc---
+  relay.var_2_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+relay.nn.batch_flatten_1_1_0_0 1
+relay.var_2_1_0_0 1
+
+---Children---
+---varobjects---
+ ===pVar===
+ ---name---
+ dense_1
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+transform.AlterOpLayout_0_1_0_0
+---params---
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+---Children---
+run_opt_pass_2_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ tLtqk
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+analysis.get_total_mac_number_1_1_0_0
+---params---
+  ===pVar===
+  ---name---
+  func
+  ---varTofunc---
+  run_opt_pass_2_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+run_opt_pass_2_1_0_0 1
+
+---Children---
+---varobjects---
+ ===pVar===
+ ---name---
+ compute_count
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+TempOpAttr_3_1_0_0
+---params---
+  ===pConst===
+  ---const---
+  concatenate
+  ---consts---
+  concatenate 
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pConst===
+  ---const---
+  FTVMLegalize
+  ---consts---
+  FTVMLegalize 
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pVar===
+  ---name---
+  legalize_concatenate
+  ---varTofunc---
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+---Children---
+with 
+---varobjects---
+ ===pVar===
+ ---name---
+ dRXdL
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pWith===
+---withitems---
+  ===pVar===
+  ---name---
+  dRXdL
+  ---varTofunc---
+  TempOpAttr_3_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+---body---
+---restname---
+
+---surround---
+---Parents---
+TempOpAttr_3_1_0_0 1
+
+---Children---
+---varobjects---
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+before_0_1_250_0
+---params---
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+ ===pWith===
+ ---withitems---
+   ===pVar===
+   ---name---
+   dRXdL
+   ---varTofunc---
+   TempOpAttr_3_1_0_0 
+   ---varTocls---
+   ---restname---
+   
+   ---surround---
+   ---Parents---
+   ---Children---
+   ---varobjects---
+
+---body---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ TempOpAttr_3_1_0_0 1
+
+ ---Children---
+ ---varobjects---
+
+---Parents---
+---Children---
+run_opt_pass_2_1_252_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ a
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+transform.Legalize_0_1_251_0
+---params---
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+ ===pWith===
+ ---withitems---
+   ===pVar===
+   ---name---
+   dRXdL
+   ---varTofunc---
+   TempOpAttr_3_1_0_0 
+   ---varTocls---
+   ---restname---
+   
+   ---surround---
+   ---Parents---
+   ---Children---
+   ---varobjects---
+
+---body---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ TempOpAttr_3_1_0_0 1
+
+ ---Children---
+ ---varobjects---
+
+---Parents---
+---Children---
+run_opt_pass_2_1_252_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ PWv6o
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+run_opt_pass_2_1_252_0
+---params---
+  ===pVar===
+  ---name---
+  a
+  ---varTofunc---
+  before_0_1_250_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pVar===
+  ---name---
+  PWv6o
+  ---varTofunc---
+  transform.Legalize_0_1_251_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+ ===pWith===
+ ---withitems---
+   ===pVar===
+   ---name---
+   dRXdL
+   ---varTofunc---
+   TempOpAttr_3_1_0_0 
+   ---varTocls---
+   ---restname---
+   
+   ---surround---
+   ---Parents---
+   ---Children---
+   ---varobjects---
+
+---body---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ TempOpAttr_3_1_0_0 1
+
+ ---Children---
+ ---varobjects---
+
+---Parents---
+before_0_1_250_0 1
+transform.Legalize_0_1_251_0 1
+
+---Children---
+---varobjects---
+ ===pVar===
+ ---name---
+ a
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+expected_0_1_253_0
+---params---
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+ ===pWith===
+ ---withitems---
+   ===pVar===
+   ---name---
+   dRXdL
+   ---varTofunc---
+   TempOpAttr_3_1_0_0 
+   ---varTocls---
+   ---restname---
+   
+   ---surround---
+   ---Parents---
+   ---Children---
+   ---varobjects---
+
+---body---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ TempOpAttr_3_1_0_0 1
+
+ ---Children---
+ ---varobjects---
+
+---Parents---
+---Children---
+run_opt_pass_2_1_255_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ rUN0X
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+transform.InferType_0_1_254_0
+---params---
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+ ===pWith===
+ ---withitems---
+   ===pVar===
+   ---name---
+   dRXdL
+   ---varTofunc---
+   TempOpAttr_3_1_0_0 
+   ---varTocls---
+   ---restname---
+   
+   ---surround---
+   ---Parents---
+   ---Children---
+   ---varobjects---
+
+---body---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ TempOpAttr_3_1_0_0 1
+
+ ---Children---
+ ---varobjects---
+
+---Parents---
+---Children---
+run_opt_pass_2_1_255_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ gk2Wr
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+run_opt_pass_2_1_255_0
+---params---
+  ===pVar===
+  ---name---
+  rUN0X
+  ---varTofunc---
+  expected_0_1_253_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pVar===
+  ---name---
+  gk2Wr
+  ---varTofunc---
+  transform.InferType_0_1_254_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+ ===pWith===
+ ---withitems---
+   ===pVar===
+   ---name---
+   dRXdL
+   ---varTofunc---
+   TempOpAttr_3_1_0_0 
+   ---varTocls---
+   ---restname---
+   
+   ---surround---
+   ---Parents---
+   ---Children---
+   ---varobjects---
+
+---body---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ TempOpAttr_3_1_0_0 1
+
+ ---Children---
+ ---varobjects---
+
+---Parents---
+expected_0_1_253_0 1
+transform.InferType_0_1_254_0 1
+
+---Children---
+---varobjects---
+ ===pVar===
+ ---name---
+ b
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+relay.TypeVar_2_1_0_0
+---params---
+  ===pConst===
+  ---const---
+  tp
+  ---consts---
+  tp2 tp tp1 
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pVar===
+  ---name---
+  relay.TypeKind.ShapeVar
+  ---varTofunc---
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+---Children---
+relay.RefType_1_1_0_0 relay.FuncType_4_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ tp
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+relay.RefType_1_1_0_0
+---params---
+  ===pVar===
+  ---name---
+  tp
+  ---varTofunc---
+  relay.TypeVar_2_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+relay.TypeVar_2_1_0_0 1
+
+---Children---
+check_kind_1_0_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ rt
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+check_kind_1_0_0_0
+---params---
+  ===pVar===
+  ---name---
+  rt
+  ---varTofunc---
+  relay.FuncType_4_1_0_0 relay.RefType_1_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+relay.RefType_1_1_0_0 1
+relay.FuncType_4_1_0_0 1
+
+---Children---
+---varobjects---
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+relay.FuncType_4_1_0_0
+---params---
+  ===pVar===
+  ---name---
+  NSaOP
+  ---varTofunc---
+  tvm.runtime.convert_1_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pVar===
+  ---name---
+  tp2
+  ---varTofunc---
+  relay.TypeVar_2_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pVar===
+  ---name---
+  YdSCu
+  ---varTofunc---
+  tvm.runtime.convert_1_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pVar===
+  ---name---
+  WE504
+  ---varTofunc---
+  tvm.runtime.convert_1_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+tvm.runtime.convert_1_1_0_0 3
+relay.TypeVar_2_1_0_0 1
+
+---Children---
+check_kind_1_0_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ tf
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+verify_reshape_3_0_0_0
+---params---
+  ===pTuple===
+  ---content---
+    ===pNumber===
+    ---num---
+    2
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+    ===pNumber===
+    ---num---
+    3
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+    ===pNumber===
+    ---num---
+    4
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pTuple===
+  ---content---
+    ===pNumber===
+    ---num---
+    8
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+    ===pNumber===
+    ---num---
+    3
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pTuple===
+  ---content---
+    ===pNumber===
+    ---num---
+    8
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+    ===pNumber===
+    ---num---
+    3
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+---Children---
+---varobjects---
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+_verify_6_0_0_0
+---params---
+  ===pTuple===
+  ---content---
+    ===pNumber===
+    ---num---
+    3
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pNumber===
+  ---num---
+  3
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pNumber===
+  ---num---
+  1
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pNumber===
+  ---num---
+  0
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pUop===
+  ---operand---
+    ===pNumber===
+    ---num---
+    1
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pConst===
+  ---const---
+  int32
+  ---consts---
+  int32 float32 
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+---Children---
+---varobjects---
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+relay.subtract_2_1_0_0
+---params---
+  ===pVar===
+  ---name---
+  i
+  ---varTofunc---
+  relay.var_3_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pVar===
+  ---name---
+  nBZvI
+  ---varTofunc---
+  relay.const_2_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+relay.var_3_1_0_0 1
+relay.const_2_1_0_0 1
+
+---Children---
+relay.Function_3_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ sub
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+relay.Function_3_1_0_0
+---params---
+  ===pList===
+  ---content---
+    ===pVar===
+    ---name---
+    i
+    ---varTofunc---
+    relay.var_3_1_0_0 
+    ---varTocls---
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---mutable---
+  False
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pVar===
+  ---name---
+  sub
+  ---varTofunc---
+  relay.subtract_2_1_0_0 relay.Call_2_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pKeyword===
+  ---keywordStr---
+  ret_type
+  ---keywordContent---
+    ===pVar===
+    ---name---
+    Ulrh9
+    ---varTofunc---
+    relay.TensorType_2_1_0_0 
+    ---varTocls---
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+relay.var_3_1_0_0 1
+relay.subtract_2_1_0_0 1
+relay.TensorType_2_1_0_0 1
+relay.Call_2_1_0_0 1
+
+---Children---
+run_infer_type_1_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ func
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+np.array_2_1_0_0
+---params---
+  ===pNumber===
+  ---num---
+  1
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pKeyword===
+  ---keywordStr---
+  dtype
+  ---keywordContent---
+    ===pConst===
+    ---const---
+    int32
+    ---consts---
+    int32 
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+---Children---
+---varobjects---
+ ===pVar===
+ ---name---
+ i_data
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+relay.GlobalVar_1_1_0_0
+---params---
+  ===pConst===
+  ---const---
+  f
+  ---consts---
+  f 
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+ ===pVar===
+ ---name---
+ value
+ ---varTofunc---
+ relay.Function_4_1_0_0 
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+  ===pSubs===
+  ---fullstr---
+  mod[f]
+  ---subsTosubs---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+ ===pVar===
+ ---name---
+ iRjTr
+ ---varTofunc---
+ relay.Function_2_1_0_0 
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+  ===pSubs===
+  ---fullstr---
+  mod[f]
+  ---subsTosubs---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---restname---
+
+---surround---
+---Parents---
+---Children---
+f_1_1_0_0 f_2_1_427_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ f
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+f_1_1_0_0
+---params---
+  ===pBinop===
+  ---left---
+    ===pVar===
+    ---name---
+    n
+    ---varTofunc---
+    relay.Var_2_1_0_0 
+    ---varTocls---
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---right---
+    ===pVar===
+    ---name---
+    OBy6x
+    ---varTofunc---
+    relay.const_2_1_0_0 
+    ---varTocls---
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+relay.GlobalVar_1_1_0_0 1
+relay.Var_2_1_0_0 1
+relay.const_2_1_0_0 1
+
+---Children---
+check_eval_3_0_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ Og8jE
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+relay.Function_4_1_0_0
+---params---
+  ===pList===
+  ---content---
+    ===pVar===
+    ---name---
+    n
+    ---varTofunc---
+    relay.Var_2_1_0_0 
+    ---varTocls---
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---mutable---
+  False
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pVar===
+  ---name---
+  funcbody
+  ---varTofunc---
+  relay.If_3_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pVar===
+  ---name---
+  i64
+  ---varTofunc---
+  relay.TensorType_2_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pList===
+  ---content---
+  ---mutable---
+  True
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+ ===pVar===
+ ---name---
+ value
+ ---varTofunc---
+ relay.Function_4_1_0_0 
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+  ===pSubs===
+  ---fullstr---
+  mod[f]
+  ---subsTosubs---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---restname---
+
+---surround---
+---Parents---
+relay.Var_2_1_0_0 1
+relay.If_3_1_0_0 1
+relay.TensorType_2_1_0_0 1
+
+---Children---
+---varobjects---
+ ===pVar===
+ ---name---
+ value
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+check_eval_3_0_0_0
+---params---
+  ===pVar===
+  ---name---
+  FfqR3
+  ---varTofunc---
+  f_1_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pNumber===
+  ---num---
+  30.0
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pKeyword===
+  ---keywordStr---
+  mod
+  ---keywordContent---
+    ===pVar===
+    ---name---
+    mod
+    ---varTofunc---
+    tvm.IRModule_0_1_0_0 
+    ---varTocls---
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+    ===pVar===
+    ---name---
+    mod
+    ---varTofunc---
+    PXj7r_1_1_0_0 
+    ---varTocls---
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+f_1_1_0_0 1
+tvm.IRModule_0_1_0_0 1
+
+---Children---
+---varobjects---
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+transform.ToANormalForm_0_1_0_0
+---params---
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+---Children---
+PXj7r_1_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ PXj7r
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+PXj7r_1_1_0_0
+---params---
+  ===pVar===
+  ---name---
+  mod
+  ---varTofunc---
+  tvm.IRModule_0_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+transform.ToANormalForm_0_1_0_0 1
+tvm.IRModule_0_1_0_0 1
+
+---Children---
+---varobjects---
+ ===pVar===
+ ---name---
+ mod
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+make_solver_0_1_0_0
+---params---
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+---Children---
+solver.Unify_2_0_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ solver
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+relay.ty.IncompleteType_0_1_0_0
+---params---
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+---Children---
+relay.ty.TupleType_1_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ t1
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+relay.ty.TensorType_2_1_0_0
+---params---
+  ===pTuple===
+  ---content---
+    ===pNumber===
+    ---num---
+    1
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+    ===pNumber===
+    ---num---
+    2
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+    ===pNumber===
+    ---num---
+    3
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pConst===
+  ---const---
+  float32
+  ---consts---
+  float32 
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+---Children---
+---varobjects---
+ ===pVar===
+ ---name---
+ tensor1
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+relay.ty.TupleType_1_1_0_0
+---params---
+  ===pList===
+  ---content---
+    ===pVar===
+    ---name---
+    t1
+    ---varTofunc---
+    relay.ty.IncompleteType_0_1_0_0 
+    ---varTocls---
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+    ===pVar===
+    ---name---
+    t1
+    ---varTofunc---
+    relay.ty.IncompleteType_0_1_0_0 
+    ---varTocls---
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---mutable---
+  False
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+relay.ty.IncompleteType_0_1_0_0 2
+
+---Children---
+solver.Unify_2_0_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ KMGxR
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+solver.Unify_2_0_0_0
+---params---
+  ===pVar===
+  ---name---
+  tup1
+  ---varTofunc---
+  relay.TypeCall_2_1_0_0 relay.ty.TupleType_1_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pVar===
+  ---name---
+  tup2
+  ---varTofunc---
+  relay.TypeCall_2_1_0_0 relay.ty.TupleType_1_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+make_solver_0_1_0_0 1
+relay.ty.TupleType_1_1_0_0 2
+relay.TypeCall_2_1_0_0 2
+
+---Children---
+---varobjects---
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+relay.IncompleteType_0_1_0_0
+---params---
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+---Children---
+relay.TypeCall_2_1_0_0 relay.TupleType_1_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ t1
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+relay.TupleType_1_1_0_0
+---params---
+  ===pList===
+  ---content---
+    ===pVar===
+    ---name---
+    t1
+    ---varTofunc---
+    relay.IncompleteType_0_1_0_0 
+    ---varTocls---
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+    ===pVar===
+    ---name---
+    t1
+    ---varTofunc---
+    relay.IncompleteType_0_1_0_0 
+    ---varTocls---
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---mutable---
+  False
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+relay.IncompleteType_0_1_0_0 2
+
+---Children---
+relay.TypeCall_2_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ okiLx
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+relay.TypeCall_2_1_0_0
+---params---
+  ===pVar===
+  ---name---
+  gtv
+  ---varTofunc---
+  relay.GlobalTypeVar_1_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pList===
+  ---content---
+    ===pVar===
+    ---name---
+    okiLx
+    ---varTofunc---
+    relay.TupleType_1_1_0_0 
+    ---varTocls---
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+    ===pVar===
+    ---name---
+    t2
+    ---varTofunc---
+    relay.IncompleteType_0_1_0_0 
+    ---varTocls---
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---mutable---
+  False
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+relay.GlobalTypeVar_1_1_0_0 1
+relay.TupleType_1_1_0_0 1
+relay.IncompleteType_0_1_0_0 1
+
+---Children---
+solver.Unify_2_0_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ tc1
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+relay.transform.InferType_0_1_0_0
+---params---
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+---Children---
+dyJUf_1_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ dyJUf
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+dyJUf_1_1_0_0
+---params---
+  ===pVar===
+  ---name---
+  ref_mod
+  ---varTofunc---
+  tvm.IRModule.from_expr_1_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+ ===pVar===
+ ---name---
+ EzdxR
+ ---varTofunc---
+ bind_params_by_name_2_1_0_0 
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+  ===pSubs===
+  ---fullstr---
+  ref_mod['main']
+  ---subsTosubs---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---restname---
+
+---surround---
+---Parents---
+relay.transform.InferType_0_1_0_0 1
+tvm.IRModule.from_expr_1_1_0_0 1
+
+---Children---
+opt_pass_1_1_362_0 check_result_5_0_0_0 bind_params_by_name_2_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ ref_mod
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+np.random.uniform_3_1_0_0
+---params---
+  ===pNumber===
+  ---num---
+  0
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pNumber===
+  ---num---
+  1
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pTuple===
+  ---content---
+    ===pNumber===
+    ---num---
+    10
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+    ===pNumber===
+    ---num---
+    10
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+---Children---
+Q3ZU1.astype_1_1_0_0 PfmoF.astype_1_1_0_0 LEpRO.astype_1_1_0_0 eTct0.astype_1_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ Q3ZU1
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+Q3ZU1.astype_1_1_0_0
+---params---
+  ===pConst===
+  ---const---
+  float32
+  ---consts---
+  float32 
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+np.random.uniform_3_1_0_0 1
+
+---Children---
+tvm.nd.array_2_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ data1
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+eTct0.astype_1_1_0_0
+---params---
+  ===pConst===
+  ---const---
+  float32
+  ---consts---
+  float32 
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+np.random.uniform_3_1_0_0 1
+
+---Children---
+tvm.nd.array_2_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ data3
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+tvm.nd.array_2_1_0_0
+---params---
+  ===pVar===
+  ---name---
+  data1
+  ---varTofunc---
+  Q3ZU1.astype_1_1_0_0 eTct0.astype_1_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pKeyword===
+  ---keywordStr---
+  ctx
+  ---keywordContent---
+    ===pVar===
+    ---name---
+    glyNH
+    ---varTofunc---
+    tvm.cpu_1_1_0_0 
+    ---varTocls---
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+    ===pVar===
+    ---name---
+    n51WJ
+    ---varTofunc---
+    tvm.cpu_1_1_0_0 
+    ---varTocls---
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+Q3ZU1.astype_1_1_0_0 1
+tvm.cpu_1_1_0_0 1
+eTct0.astype_1_1_0_0 1
+
+---Children---
+bind_params_by_name_2_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ o6ouc
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+bind_params_by_name_2_1_0_0
+---params---
+  ===pSubs===
+  ---fullstr---
+  ref_mod['main']
+  ---subsTosubs---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pDict===
+  ---keyContents---
+    ===pConst===
+    ---const---
+    in_1
+    ---consts---
+    in_1 
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+    ===pConst===
+    ---const---
+    in_3
+    ---consts---
+    in_3 
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---valueContents---
+    ===pVar===
+    ---name---
+    o6ouc
+    ---varTofunc---
+    tvm.nd.array_2_1_0_0 
+    ---varTocls---
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+    ===pVar===
+    ---name---
+    WeylN
+    ---varTofunc---
+    tvm.nd.array_2_1_0_0 
+    ---varTocls---
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+ ===pVar===
+ ---name---
+ EzdxR
+ ---varTofunc---
+ bind_params_by_name_2_1_0_0 
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+  ===pSubs===
+  ---fullstr---
+  ref_mod['main']
+  ---subsTosubs---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---restname---
+
+---surround---
+---Parents---
+dyJUf_1_1_0_0 1
+tvm.nd.array_2_1_0_0 1
+
+---Children---
+---varobjects---
+ ===pVar===
+ ---name---
+ EzdxR
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+transform.SimplifyInference_0_1_0_0
+---params---
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+---Children---
+tvm.transform.Sequential_1_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ zN3Mn
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+transform.FoldConstant_0_1_0_0
+---params---
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+---Children---
+tvm.transform.Sequential_1_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ zmRPN
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+transform.FoldScaleAxis_0_1_0_0
+---params---
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+---Children---
+tvm.transform.Sequential_1_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ lBeJH
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+transform.AnnotateTarget_1_1_0_0
+---params---
+  ===pConst===
+  ---const---
+  dnnl
+  ---consts---
+  dnnl 
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+---Children---
+tvm.transform.Sequential_1_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ lkx1L
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+transform.MergeCompilerRegions_0_1_0_0
+---params---
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+---Children---
+tvm.transform.Sequential_1_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ wRpNf
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+transform.PartitionGraph_0_1_0_0
+---params---
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+---Children---
+tvm.transform.Sequential_1_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ olRHt
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+tvm.transform.Sequential_1_1_0_0
+---params---
+  ===pList===
+  ---content---
+    ===pVar===
+    ---name---
+    LQb0e
+    ---varTofunc---
+    transform.InferType_0_1_0_0 
+    ---varTocls---
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+    ===pVar===
+    ---name---
+    zN3Mn
+    ---varTofunc---
+    transform.SimplifyInference_0_1_0_0 
+    ---varTocls---
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+    ===pVar===
+    ---name---
+    zmRPN
+    ---varTofunc---
+    transform.FoldConstant_0_1_0_0 
+    ---varTocls---
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+    ===pVar===
+    ---name---
+    lBeJH
+    ---varTofunc---
+    transform.FoldScaleAxis_0_1_0_0 
+    ---varTocls---
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+    ===pVar===
+    ---name---
+    lkx1L
+    ---varTofunc---
+    transform.AnnotateTarget_1_1_0_0 
+    ---varTocls---
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+    ===pVar===
+    ---name---
+    wRpNf
+    ---varTofunc---
+    transform.MergeCompilerRegions_0_1_0_0 
+    ---varTocls---
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+    ===pVar===
+    ---name---
+    olRHt
+    ---varTofunc---
+    transform.PartitionGraph_0_1_0_0 
+    ---varTocls---
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---mutable---
+  False
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+transform.InferType_0_1_0_0 1
+transform.SimplifyInference_0_1_0_0 1
+transform.FoldConstant_0_1_0_0 1
+transform.FoldScaleAxis_0_1_0_0 1
+transform.AnnotateTarget_1_1_0_0 1
+transform.MergeCompilerRegions_0_1_0_0 1
+transform.PartitionGraph_0_1_0_0 1
+
+---Children---
+opt_pass_1_1_362_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ opt_pass
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+tvm.transform.PassContext_2_1_0_0
+---params---
+  ===pKeyword===
+  ---keywordStr---
+  opt_level
+  ---keywordContent---
+    ===pNumber===
+    ---num---
+    3
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pKeyword===
+  ---keywordStr---
+  disabled_pass
+  ---keywordContent---
+    ===pList===
+    ---content---
+      ===pConst===
+      ---const---
+      AlterOpLayout
+      ---consts---
+      AlterOpLayout 
+      ---restname---
+      
+      ---surround---
+      ---Parents---
+      ---Children---
+      ---varobjects---
+
+    ---mutable---
+    False
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+---Children---
+with 
+---varobjects---
+ ===pVar===
+ ---name---
+ x1PIt
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pWith===
+---withitems---
+  ===pVar===
+  ---name---
+  x1PIt
+  ---varTofunc---
+  tvm.transform.PassContext_2_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+---body---
+---restname---
+
+---surround---
+---Parents---
+tvm.transform.PassContext_2_1_0_0 1
+
+---Children---
+---varobjects---
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+opt_pass_1_1_362_0
+---params---
+  ===pVar===
+  ---name---
+  ref_mod
+  ---varTofunc---
+  dyJUf_1_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+ ===pWith===
+ ---withitems---
+   ===pVar===
+   ---name---
+   x1PIt
+   ---varTofunc---
+   tvm.transform.PassContext_2_1_0_0 
+   ---varTocls---
+   ---restname---
+   
+   ---surround---
+   ---Parents---
+   ---Children---
+   ---varobjects---
+
+---body---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ tvm.transform.PassContext_2_1_0_0 1
+
+ ---Children---
+ ---varobjects---
+
+---Parents---
+tvm.transform.Sequential_1_1_0_0 1
+dyJUf_1_1_0_0 1
+
+---Children---
+check_result_5_0_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ mod
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+LEpRO.astype_1_1_0_0
+---params---
+  ===pConst===
+  ---const---
+  float32
+  ---consts---
+  float32 
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+np.random.uniform_3_1_0_0 1
+
+---Children---
+check_result_5_0_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ data2
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+PfmoF.astype_1_1_0_0
+---params---
+  ===pConst===
+  ---const---
+  float32
+  ---consts---
+  float32 
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+np.random.uniform_3_1_0_0 1
+
+---Children---
+check_result_5_0_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ data4
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+check_result_5_0_0_0
+---params---
+  ===pVar===
+  ---name---
+  mod
+  ---varTofunc---
+  opt_pass_1_1_362_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pVar===
+  ---name---
+  ref_mod
+  ---varTofunc---
+  dyJUf_1_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pDict===
+  ---keyContents---
+    ===pConst===
+    ---const---
+    in_2
+    ---consts---
+    in_2 
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+    ===pConst===
+    ---const---
+    in_4
+    ---consts---
+    in_4 
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---valueContents---
+    ===pVar===
+    ---name---
+    data2
+    ---varTofunc---
+    LEpRO.astype_1_1_0_0 
+    ---varTocls---
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+    ===pVar===
+    ---name---
+    data4
+    ---varTofunc---
+    PfmoF.astype_1_1_0_0 
+    ---varTocls---
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pTuple===
+  ---content---
+    ===pNumber===
+    ---num---
+    10
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+    ===pNumber===
+    ---num---
+    10
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pKeyword===
+  ---keywordStr---
+  tol
+  ---keywordContent---
+    ===pNumber===
+    ---num---
+    1e-05
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+opt_pass_1_1_362_0 1
+dyJUf_1_1_0_0 1
+LEpRO.astype_1_1_0_0 1
+PfmoF.astype_1_1_0_0 1
+
+---Children---
+---varobjects---
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+relay.FuncType_2_1_0_0
+---params---
+  ===pList===
+  ---content---
+  ---mutable---
+  True
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pVar===
+  ---name---
+  Yjhtq
+  ---varTofunc---
+  relay.scalar_type_1_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+relay.scalar_type_1_1_0_0 1
+
+---Children---
+relay.Var_2_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ choice_t
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+f_0_1_0_0
+---params---
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+relay.Var_2_1_0_0 1
+
+---Children---
+relay.If_3_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ E8LtJ
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+transform.ToBasicBlockNormalForm_0_1_0_0
+---params---
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+---Children---
+run_opt_pass_2_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ UyHpb
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+relay.ones_like_1_1_0_0
+---params---
+  ===pVar===
+  ---name---
+  x
+  ---varTofunc---
+  relay.var_2_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+relay.var_2_1_0_0 1
+
+---Children---
+---varobjects---
+ ===pVar===
+ ---name---
+ ABJyH
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+transform.LazyGradientInit_0_1_0_0
+---params---
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+---Children---
+y0AIG_1_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ y0AIG
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+y0AIG_1_1_0_0
+---params---
+  ===pVar===
+  ---name---
+  mod
+  ---varTofunc---
+  tvm.IRModule_0_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+transform.LazyGradientInit_0_1_0_0 1
+tvm.IRModule_0_1_0_0 1
+
+---Children---
+create_executor_1_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ mod
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+create_executor_1_1_0_0
+---params---
+  ===pKeyword===
+  ---keywordStr---
+  mod
+  ---keywordContent---
+    ===pVar===
+    ---name---
+    mod
+    ---varTofunc---
+    y0AIG_1_1_0_0 
+    ---varTocls---
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+y0AIG_1_1_0_0 1
+
+---Children---
+ex.evaluate_1_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ ex
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+rand_2_1_0_0
+---params---
+  ===pConst===
+  ---const---
+  float32
+  ---consts---
+  float32 
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pTuple===
+  ---content---
+    ===pNumber===
+    ---num---
+    10
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+    ===pNumber===
+    ---num---
+    10
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+---Children---
+p9Qje_1_1_0_0 x.asnumpy_0_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ x
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+ex.evaluate_1_1_0_0
+---params---
+  ===pSubs===
+  ---fullstr---
+  mod['main']
+  ---subsTosubs---
+   ===pVar===
+   ---name---
+   y
+   ---varTofunc---
+   relay.Function_2_1_0_0 
+   ---varTocls---
+   ---restname---
+   
+   ---surround---
+   ---Parents---
+   ---Children---
+   ---varobjects---
+    ===pSubs===
+    ---fullstr---
+    mod['main']
+    ---subsTosubs---
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  mod['main'] 
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+create_executor_1_1_0_0 1
+relay.Function_2_1_0_0 1
+tvm.IRModule_0_1_0_0 1
+
+---Children---
+p9Qje_1_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ p9Qje
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+p9Qje_1_1_0_0
+---params---
+  ===pVar===
+  ---name---
+  x
+  ---varTofunc---
+  rand_2_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+ex.evaluate_1_1_0_0 1
+rand_2_1_0_0 1
+
+---Children---
+y.asnumpy_0_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ y
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+y.asnumpy_0_1_0_0
+---params---
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+p9Qje_1_1_0_0 1
+
+---Children---
+assert_allclose_2_0_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ yvAhI
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+x.asnumpy_0_1_0_0
+---params---
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+rand_2_1_0_0 1
+
+---Children---
+assert_allclose_2_0_0_0 np.ones_like_1_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ XYCuM
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+np.ones_like_1_1_0_0
+---params---
+  ===pVar===
+  ---name---
+  kO6cU
+  ---varTofunc---
+  x.asnumpy_0_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+x.asnumpy_0_1_0_0 1
+
+---Children---
+assert_allclose_2_0_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ jHRyQ
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+assert_allclose_2_0_0_0
+---params---
+  ===pVar===
+  ---name---
+  yvAhI
+  ---varTofunc---
+  y.asnumpy_0_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pBinop===
+  ---left---
+    ===pVar===
+    ---name---
+    XYCuM
+    ---varTofunc---
+    x.asnumpy_0_1_0_0 
+    ---varTocls---
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---right---
+    ===pVar===
+    ---name---
+    jHRyQ
+    ---varTofunc---
+    np.ones_like_1_1_0_0 
+    ---varTocls---
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+y.asnumpy_0_1_0_0 1
+x.asnumpy_0_1_0_0 1
+np.ones_like_1_1_0_0 1
+
+---Children---
+---varobjects---
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+relay.ScopeBuilder_0_1_0_0
+---params---
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+---Children---
+sb.else_scope_0_1_0_0 sb.get_0_1_0_0 sb.ret_1_0_0_0 sb.let_2_1_0_0 sb.if_scope_1_1_0_0 sb.ret_1_0_428_0 sb.ret_1_0_421_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ sb
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+sb.let_2_1_0_0
+---params---
+  ===pConst===
+  ---const---
+  x
+  ---consts---
+  x 
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pVar===
+  ---name---
+  LqZZf
+  ---varTofunc---
+  relay.const_2_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+relay.ScopeBuilder_0_1_0_0 1
+relay.const_2_1_0_0 1
+
+---Children---
+sb.ret_1_0_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ x
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+sb.ret_1_0_0_0
+---params---
+  ===pVar===
+  ---name---
+  x
+  ---varTofunc---
+  sb.let_2_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+relay.ScopeBuilder_0_1_0_0 1
+sb.let_2_1_0_0 1
+
+---Children---
+---varobjects---
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+sb.get_0_1_0_0
+---params---
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+relay.ScopeBuilder_0_1_0_0 1
+
+---Children---
+relay.Function_2_1_0_0 run_infer_type_1_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ e3DZp
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+sb.if_scope_1_1_0_0
+---params---
+  ===pVar===
+  ---name---
+  ievDp
+  ---varTofunc---
+  relay.equal_2_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+relay.ScopeBuilder_0_1_0_0 1
+relay.equal_2_1_0_0 1
+
+---Children---
+with 
+---varobjects---
+ ===pVar===
+ ---name---
+ hILqy
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pWith===
+---withitems---
+  ===pVar===
+  ---name---
+  hILqy
+  ---varTofunc---
+  sb.if_scope_1_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+---body---
+---restname---
+
+---surround---
+---Parents---
+sb.if_scope_1_1_0_0 1
+
+---Children---
+---varobjects---
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+sb.ret_1_0_421_0
+---params---
+  ===pVar===
+  ---name---
+  data
+  ---varTofunc---
+  relay.var_2_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+ ===pWith===
+ ---withitems---
+   ===pVar===
+   ---name---
+   hILqy
+   ---varTofunc---
+   sb.if_scope_1_1_0_0 
+   ---varTocls---
+   ---restname---
+   
+   ---surround---
+   ---Parents---
+   ---Children---
+   ---varobjects---
+
+---body---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ sb.if_scope_1_1_0_0 1
+
+ ---Children---
+ ---varobjects---
+
+---Parents---
+relay.ScopeBuilder_0_1_0_0 1
+relay.var_2_1_0_0 1
+
+---Children---
+---varobjects---
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+sb.else_scope_0_1_0_0
+---params---
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+relay.ScopeBuilder_0_1_0_0 1
+
+---Children---
+with 
+---varobjects---
+ ===pVar===
+ ---name---
+ Bp1an
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pWith===
+---withitems---
+  ===pVar===
+  ---name---
+  Bp1an
+  ---varTofunc---
+  sb.else_scope_0_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+---body---
+---restname---
+
+---surround---
+---Parents---
+sb.else_scope_0_1_0_0 1
+
+---Children---
+---varobjects---
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+relay.const_2_1_424_0
+---params---
+  ===pNumber===
+  ---num---
+  1
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pVar===
+  ---name---
+  ti32
+  ---varTofunc---
+  relay.scalar_type_1_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+ ===pWith===
+ ---withitems---
+   ===pVar===
+   ---name---
+   Bp1an
+   ---varTofunc---
+   sb.else_scope_0_1_0_0 
+   ---varTocls---
+   ---restname---
+   
+   ---surround---
+   ---Parents---
+   ---Children---
+   ---varobjects---
+
+---body---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ sb.else_scope_0_1_0_0 1
+
+ ---Children---
+ ---varobjects---
+
+---Parents---
+relay.scalar_type_1_1_0_0 1
+
+---Children---
+relay.subtract_2_1_425_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ Ngrr8
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+relay.subtract_2_1_425_0
+---params---
+  ===pVar===
+  ---name---
+  n
+  ---varTofunc---
+  relay.var_2_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pVar===
+  ---name---
+  Ngrr8
+  ---varTofunc---
+  relay.const_2_1_424_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+ ===pWith===
+ ---withitems---
+   ===pVar===
+   ---name---
+   Bp1an
+   ---varTofunc---
+   sb.else_scope_0_1_0_0 
+   ---varTocls---
+   ---restname---
+   
+   ---surround---
+   ---Parents---
+   ---Children---
+   ---varobjects---
+
+---body---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ sb.else_scope_0_1_0_0 1
+
+ ---Children---
+ ---varobjects---
+
+---Parents---
+relay.var_2_1_0_0 1
+relay.const_2_1_424_0 1
+
+---Children---
+f_2_1_427_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ JLpZm
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+relay.log_1_1_426_0
+---params---
+  ===pVar===
+  ---name---
+  data
+  ---varTofunc---
+  relay.var_2_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+ ===pWith===
+ ---withitems---
+   ===pVar===
+   ---name---
+   Bp1an
+   ---varTofunc---
+   sb.else_scope_0_1_0_0 
+   ---varTocls---
+   ---restname---
+   
+   ---surround---
+   ---Parents---
+   ---Children---
+   ---varobjects---
+
+---body---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ sb.else_scope_0_1_0_0 1
+
+ ---Children---
+ ---varobjects---
+
+---Parents---
+relay.var_2_1_0_0 1
+
+---Children---
+f_2_1_427_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ mp4p0
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+f_2_1_427_0
+---params---
+  ===pVar===
+  ---name---
+  JLpZm
+  ---varTofunc---
+  relay.subtract_2_1_425_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pVar===
+  ---name---
+  mp4p0
+  ---varTofunc---
+  relay.log_1_1_426_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+ ===pWith===
+ ---withitems---
+   ===pVar===
+   ---name---
+   Bp1an
+   ---varTofunc---
+   sb.else_scope_0_1_0_0 
+   ---varTocls---
+   ---restname---
+   
+   ---surround---
+   ---Parents---
+   ---Children---
+   ---varobjects---
+
+---body---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ sb.else_scope_0_1_0_0 1
+
+ ---Children---
+ ---varobjects---
+
+---Parents---
+relay.GlobalVar_1_1_0_0 1
+relay.subtract_2_1_425_0 1
+relay.log_1_1_426_0 1
+
+---Children---
+sb.ret_1_0_428_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ q7FLD
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+sb.ret_1_0_428_0
+---params---
+  ===pVar===
+  ---name---
+  q7FLD
+  ---varTofunc---
+  f_2_1_427_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+ ===pWith===
+ ---withitems---
+   ===pVar===
+   ---name---
+   Bp1an
+   ---varTofunc---
+   sb.else_scope_0_1_0_0 
+   ---varTocls---
+   ---restname---
+   
+   ---surround---
+   ---Parents---
+   ---Children---
+   ---varobjects---
+
+---body---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ sb.else_scope_0_1_0_0 1
+
+ ---Children---
+ ---varobjects---
+
+---Parents---
+relay.ScopeBuilder_0_1_0_0 1
+f_2_1_427_0 1
+
+---Children---
+---varobjects---
+
+~~~~~~~~~~~~~~~~~~~~
+===pFunc===
+---funcName---
+relay.Call_2_1_0_0
+---params---
+  ===pVar===
+  ---name---
+  f
+  ---varTofunc---
+  relay.var_1_1_0_0 
+  ---varTocls---
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+  ===pList===
+  ---content---
+    ===pVar===
+    ---name---
+    x
+    ---varTofunc---
+    relay.var_2_1_0_0 
+    ---varTocls---
+    ---restname---
+    
+    ---surround---
+    ---Parents---
+    ---Children---
+    ---varobjects---
+
+  ---mutable---
+  False
+  ---restname---
+  
+  ---surround---
+  ---Parents---
+  ---Children---
+  ---varobjects---
+
+
+---id---
+0
+---suffix---
+None
+---adjuncts---
+---restname---
+
+---surround---
+---Parents---
+relay.var_1_1_0_0 1
+relay.var_2_1_0_0 1
+
+---Children---
+relay.Function_3_1_0_0 
+---varobjects---
+ ===pVar===
+ ---name---
+ VA3yG
+ ---varTofunc---
+ ---varTocls---
+ ---restname---
+ 
+ ---surround---
+ ---Parents---
+ ---Children---
+ ---varobjects---
+
+

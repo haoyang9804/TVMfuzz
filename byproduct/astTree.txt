@@ -1,0 +1,3457 @@
+Module(
+  body=[
+    Import(
+      names=[
+        alias(name='pytest')]),
+    Import(
+      names=[
+        alias(name='tvm')]),
+    ImportFrom(
+      module='tvm',
+      names=[
+        alias(name='te')],
+      level=0),
+    ImportFrom(
+      module='tvm',
+      names=[
+        alias(name='relay')],
+      level=0),
+    ImportFrom(
+      module='tvm.relay',
+      names=[
+        alias(name='op'),
+        alias(name='transform'),
+        alias(name='analysis')],
+      level=0),
+    ImportFrom(
+      module='tvm.relay',
+      names=[
+        alias(name='Any')],
+      level=0),
+    FunctionDef(
+      name='run_infer_type',
+      args=arguments(
+        posonlyargs=[],
+        args=[
+          arg(arg='expr'),
+          arg(arg='mod')],
+        kwonlyargs=[],
+        kw_defaults=[],
+        defaults=[
+          Constant(value=None)]),
+      body=[
+        If(
+          test=UnaryOp(
+            op=Not(),
+            operand=Name(id='mod', ctx=Load())),
+          body=[
+            Assign(
+              targets=[
+                Name(id='mod', ctx=Store())],
+              value=Call(
+                func=Attribute(
+                  value=Attribute(
+                    value=Name(id='tvm', ctx=Load()),
+                    attr='IRModule',
+                    ctx=Load()),
+                  attr='from_expr',
+                  ctx=Load()),
+                args=[
+                  Name(id='expr', ctx=Load())],
+                keywords=[])),
+            Assign(
+              targets=[
+                Name(id='mod', ctx=Store())],
+              value=Call(
+                func=Call(
+                  func=Attribute(
+                    value=Name(id='transform', ctx=Load()),
+                    attr='InferType',
+                    ctx=Load()),
+                  args=[],
+                  keywords=[]),
+                args=[
+                  Name(id='mod', ctx=Load())],
+                keywords=[])),
+            Assign(
+              targets=[
+                Name(id='entry', ctx=Store())],
+              value=Subscript(
+                value=Name(id='mod', ctx=Load()),
+                slice=Constant(value='main'),
+                ctx=Load())),
+            Return(
+              value=IfExp(
+                test=Call(
+                  func=Name(id='isinstance', ctx=Load()),
+                  args=[
+                    Name(id='expr', ctx=Load()),
+                    Attribute(
+                      value=Name(id='relay', ctx=Load()),
+                      attr='Function',
+                      ctx=Load())],
+                  keywords=[]),
+                body=Name(id='entry', ctx=Load()),
+                orelse=Attribute(
+                  value=Name(id='entry', ctx=Load()),
+                  attr='body',
+                  ctx=Load())))],
+          orelse=[
+            If(
+              test=Call(
+                func=Name(id='isinstance', ctx=Load()),
+                args=[
+                  Name(id='expr', ctx=Load()),
+                  Attribute(
+                    value=Name(id='relay', ctx=Load()),
+                    attr='GlobalVar',
+                    ctx=Load())],
+                keywords=[]),
+              body=[
+                Assign(
+                  targets=[
+                    Name(id='gv', ctx=Store())],
+                  value=Attribute(
+                    value=Name(id='expr', ctx=Load()),
+                    attr='name_hint',
+                    ctx=Load()))],
+              orelse=[
+                Assign(
+                  targets=[
+                    Name(id='func', ctx=Store())],
+                  value=Name(id='expr', ctx=Load())),
+                If(
+                  test=UnaryOp(
+                    op=Not(),
+                    operand=Call(
+                      func=Name(id='isinstance', ctx=Load()),
+                      args=[
+                        Name(id='expr', ctx=Load()),
+                        Attribute(
+                          value=Name(id='relay', ctx=Load()),
+                          attr='Function',
+                          ctx=Load())],
+                      keywords=[])),
+                  body=[
+                    Assign(
+                      targets=[
+                        Name(id='func', ctx=Store())],
+                      value=Call(
+                        func=Attribute(
+                          value=Name(id='relay', ctx=Load()),
+                          attr='Function',
+                          ctx=Load()),
+                        args=[
+                          Call(
+                            func=Attribute(
+                              value=Name(id='analysis', ctx=Load()),
+                              attr='free_vars',
+                              ctx=Load()),
+                            args=[
+                              Name(id='expr', ctx=Load())],
+                            keywords=[]),
+                          Name(id='expr', ctx=Load())],
+                        keywords=[]))],
+                  orelse=[]),
+                Assign(
+                  targets=[
+                    Subscript(
+                      value=Name(id='mod', ctx=Load()),
+                      slice=Constant(value='main'),
+                      ctx=Store())],
+                  value=Name(id='func', ctx=Load())),
+                Assign(
+                  targets=[
+                    Name(id='gv', ctx=Store())],
+                  value=Constant(value='main'))]),
+            Assign(
+              targets=[
+                Name(id='mod', ctx=Store())],
+              value=Call(
+                func=Call(
+                  func=Attribute(
+                    value=Name(id='transform', ctx=Load()),
+                    attr='InferType',
+                    ctx=Load()),
+                  args=[],
+                  keywords=[]),
+                args=[
+                  Name(id='mod', ctx=Load())],
+                keywords=[])),
+            If(
+              test=Call(
+                func=Name(id='isinstance', ctx=Load()),
+                args=[
+                  Name(id='expr', ctx=Load()),
+                  Tuple(
+                    elts=[
+                      Attribute(
+                        value=Name(id='relay', ctx=Load()),
+                        attr='GlobalVar',
+                        ctx=Load()),
+                      Attribute(
+                        value=Name(id='relay', ctx=Load()),
+                        attr='Function',
+                        ctx=Load())],
+                    ctx=Load())],
+                keywords=[]),
+              body=[
+                Return(
+                  value=Subscript(
+                    value=Name(id='mod', ctx=Load()),
+                    slice=Name(id='gv', ctx=Load()),
+                    ctx=Load()))],
+              orelse=[]),
+            Return(
+              value=Attribute(
+                value=Subscript(
+                  value=Name(id='mod', ctx=Load()),
+                  slice=Name(id='gv', ctx=Load()),
+                  ctx=Load()),
+                attr='body',
+                ctx=Load()))])],
+      decorator_list=[]),
+    FunctionDef(
+      name='assert_has_type',
+      args=arguments(
+        posonlyargs=[],
+        args=[
+          arg(arg='expr'),
+          arg(arg='typ'),
+          arg(arg='mod')],
+        kwonlyargs=[],
+        kw_defaults=[],
+        defaults=[
+          Call(
+            func=Attribute(
+              value=Name(id='tvm', ctx=Load()),
+              attr='IRModule',
+              ctx=Load()),
+            args=[
+              Dict(keys=[], values=[])],
+            keywords=[])]),
+      body=[
+        Assign(
+          targets=[
+            Name(id='checked_expr', ctx=Store())],
+          value=Call(
+            func=Name(id='run_infer_type', ctx=Load()),
+            args=[
+              Name(id='expr', ctx=Load()),
+              Name(id='mod', ctx=Load())],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='checked_type', ctx=Store())],
+          value=Attribute(
+            value=Name(id='checked_expr', ctx=Load()),
+            attr='checked_type',
+            ctx=Load())),
+        If(
+          test=Compare(
+            left=Name(id='checked_type', ctx=Load()),
+            ops=[
+              NotEq()],
+            comparators=[
+              Name(id='typ', ctx=Load())]),
+          body=[
+            Raise(
+              exc=Call(
+                func=Name(id='RuntimeError', ctx=Load()),
+                args=[
+                  BinOp(
+                    left=Constant(value='Type mismatch %s vs %s'),
+                    op=Mod(),
+                    right=Tuple(
+                      elts=[
+                        Name(id='checked_type', ctx=Load()),
+                        Name(id='typ', ctx=Load())],
+                      ctx=Load()))],
+                keywords=[]))],
+          orelse=[])],
+      decorator_list=[]),
+    FunctionDef(
+      name='initialize_box_adt',
+      args=arguments(
+        posonlyargs=[],
+        args=[
+          arg(arg='mod')],
+        kwonlyargs=[],
+        kw_defaults=[],
+        defaults=[]),
+      body=[
+        Assign(
+          targets=[
+            Name(id='box', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='GlobalTypeVar',
+              ctx=Load()),
+            args=[
+              Constant(value='box')],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='tv', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='TypeVar',
+              ctx=Load()),
+            args=[
+              Constant(value='tv')],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='constructor', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='Constructor',
+              ctx=Load()),
+            args=[
+              Constant(value='constructor'),
+              List(
+                elts=[
+                  Name(id='tv', ctx=Load())],
+                ctx=Load()),
+              Name(id='box', ctx=Load())],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='data', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='TypeData',
+              ctx=Load()),
+            args=[
+              Name(id='box', ctx=Load()),
+              List(
+                elts=[
+                  Name(id='tv', ctx=Load())],
+                ctx=Load()),
+              List(
+                elts=[
+                  Name(id='constructor', ctx=Load())],
+                ctx=Load())],
+            keywords=[])),
+        Assign(
+          targets=[
+            Subscript(
+              value=Name(id='mod', ctx=Load()),
+              slice=Name(id='box', ctx=Load()),
+              ctx=Store())],
+          value=Name(id='data', ctx=Load())),
+        Return(
+          value=Tuple(
+            elts=[
+              Name(id='box', ctx=Load()),
+              Name(id='constructor', ctx=Load())],
+            ctx=Load()))],
+      decorator_list=[]),
+    FunctionDef(
+      name='test_monomorphic_let',
+      args=arguments(
+        posonlyargs=[],
+        args=[],
+        kwonlyargs=[],
+        kw_defaults=[],
+        defaults=[]),
+      body=[
+        Expr(
+          value=Constant(value='Program: let %x = 1; %x')),
+        Assign(
+          targets=[
+            Name(id='sb', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='ScopeBuilder',
+              ctx=Load()),
+            args=[],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='x', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='sb', ctx=Load()),
+              attr='let',
+              ctx=Load()),
+            args=[
+              Constant(value='x'),
+              Call(
+                func=Attribute(
+                  value=Name(id='relay', ctx=Load()),
+                  attr='const',
+                  ctx=Load()),
+                args=[
+                  Constant(value=1.0),
+                  Constant(value='float64')],
+                keywords=[])],
+            keywords=[])),
+        Expr(
+          value=Call(
+            func=Attribute(
+              value=Name(id='sb', ctx=Load()),
+              attr='ret',
+              ctx=Load()),
+            args=[
+              Name(id='x', ctx=Load())],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='xchecked', ctx=Store())],
+          value=Call(
+            func=Name(id='run_infer_type', ctx=Load()),
+            args=[
+              Call(
+                func=Attribute(
+                  value=Name(id='sb', ctx=Load()),
+                  attr='get',
+                  ctx=Load()),
+                args=[],
+                keywords=[])],
+            keywords=[])),
+        Assert(
+          test=Compare(
+            left=Attribute(
+              value=Name(id='xchecked', ctx=Load()),
+              attr='checked_type',
+              ctx=Load()),
+            ops=[
+              Eq()],
+            comparators=[
+              Call(
+                func=Attribute(
+                  value=Name(id='relay', ctx=Load()),
+                  attr='scalar_type',
+                  ctx=Load()),
+                args=[
+                  Constant(value='float64')],
+                keywords=[])]))],
+      decorator_list=[]),
+    FunctionDef(
+      name='test_single_op',
+      args=arguments(
+        posonlyargs=[],
+        args=[],
+        kwonlyargs=[],
+        kw_defaults=[],
+        defaults=[]),
+      body=[
+        Expr(
+          value=Constant(value='Program: fn (%x : float32) { let %t1 = f(%x); %t1 }')),
+        Assign(
+          targets=[
+            Name(id='x', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='var',
+              ctx=Load()),
+            args=[
+              Constant(value='x')],
+            keywords=[
+              keyword(
+                arg='shape',
+                value=List(elts=[], ctx=Load()))])),
+        Assign(
+          targets=[
+            Name(id='func', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='Function',
+              ctx=Load()),
+            args=[
+              List(
+                elts=[
+                  Name(id='x', ctx=Load())],
+                ctx=Load()),
+              Call(
+                func=Attribute(
+                  value=Name(id='op', ctx=Load()),
+                  attr='log',
+                  ctx=Load()),
+                args=[
+                  Name(id='x', ctx=Load())],
+                keywords=[])],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='ttype', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='TensorType',
+              ctx=Load()),
+            args=[
+              List(elts=[], ctx=Load())],
+            keywords=[
+              keyword(
+                arg='dtype',
+                value=Constant(value='float32'))])),
+        Expr(
+          value=Call(
+            func=Name(id='assert_has_type', ctx=Load()),
+            args=[
+              Name(id='func', ctx=Load()),
+              Call(
+                func=Attribute(
+                  value=Name(id='relay', ctx=Load()),
+                  attr='FuncType',
+                  ctx=Load()),
+                args=[
+                  List(
+                    elts=[
+                      Name(id='ttype', ctx=Load())],
+                    ctx=Load()),
+                  Name(id='ttype', ctx=Load())],
+                keywords=[])],
+            keywords=[]))],
+      decorator_list=[]),
+    FunctionDef(
+      name='test_add_broadcast_op',
+      args=arguments(
+        posonlyargs=[],
+        args=[],
+        kwonlyargs=[],
+        kw_defaults=[],
+        defaults=[]),
+      body=[
+        Expr(
+          value=Constant(value='\n    Program:\n        fn (%x: Tensor[(10, 4), float32], %y: Tensor[(5, 10, 1), float32])\n            -> Tensor[(5, 10, 4), float32] {\n            %x + %y\n        }\n    ')),
+        Assign(
+          targets=[
+            Name(id='x', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='var',
+              ctx=Load()),
+            args=[
+              Constant(value='x')],
+            keywords=[
+              keyword(
+                arg='shape',
+                value=Tuple(
+                  elts=[
+                    Constant(value=10),
+                    Constant(value=4)],
+                  ctx=Load()))])),
+        Assign(
+          targets=[
+            Name(id='y', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='var',
+              ctx=Load()),
+            args=[
+              Constant(value='y')],
+            keywords=[
+              keyword(
+                arg='shape',
+                value=Tuple(
+                  elts=[
+                    Constant(value=5),
+                    Constant(value=10),
+                    Constant(value=1)],
+                  ctx=Load()))])),
+        Assign(
+          targets=[
+            Name(id='z', ctx=Store())],
+          value=BinOp(
+            left=Name(id='x', ctx=Load()),
+            op=Add(),
+            right=Name(id='y', ctx=Load()))),
+        Assign(
+          targets=[
+            Name(id='func', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='Function',
+              ctx=Load()),
+            args=[
+              List(
+                elts=[
+                  Name(id='x', ctx=Load()),
+                  Name(id='y', ctx=Load())],
+                ctx=Load()),
+              Name(id='z', ctx=Load())],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='t1', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='TensorType',
+              ctx=Load()),
+            args=[
+              Tuple(
+                elts=[
+                  Constant(value=10),
+                  Constant(value=4)],
+                ctx=Load()),
+              Constant(value='float32')],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='t2', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='TensorType',
+              ctx=Load()),
+            args=[
+              Tuple(
+                elts=[
+                  Constant(value=5),
+                  Constant(value=10),
+                  Constant(value=1)],
+                ctx=Load()),
+              Constant(value='float32')],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='t3', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='TensorType',
+              ctx=Load()),
+            args=[
+              Tuple(
+                elts=[
+                  Constant(value=5),
+                  Constant(value=10),
+                  Constant(value=4)],
+                ctx=Load()),
+              Constant(value='float32')],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='expected_ty', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='FuncType',
+              ctx=Load()),
+            args=[
+              List(
+                elts=[
+                  Name(id='t1', ctx=Load()),
+                  Name(id='t2', ctx=Load())],
+                ctx=Load()),
+              Name(id='t3', ctx=Load())],
+            keywords=[])),
+        Expr(
+          value=Call(
+            func=Name(id='assert_has_type', ctx=Load()),
+            args=[
+              Name(id='func', ctx=Load()),
+              Name(id='expected_ty', ctx=Load())],
+            keywords=[]))],
+      decorator_list=[]),
+    FunctionDef(
+      name='test_dual_op',
+      args=arguments(
+        posonlyargs=[],
+        args=[],
+        kwonlyargs=[],
+        kw_defaults=[],
+        defaults=[]),
+      body=[
+        Expr(
+          value=Constant(value='Program:\n    fn (%x : Tensor[(10, 10), float32]) {\n      let %t1 = log(x);\n      let %t2 = add(%t1, %x);\n      %t1\n    }\n    ')),
+        Assign(
+          targets=[
+            Name(id='tp', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='TensorType',
+              ctx=Load()),
+            args=[
+              Tuple(
+                elts=[
+                  Constant(value=10),
+                  Constant(value=10)],
+                ctx=Load()),
+              Constant(value='float32')],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='x', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='var',
+              ctx=Load()),
+            args=[
+              Constant(value='x'),
+              Name(id='tp', ctx=Load())],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='sb', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='ScopeBuilder',
+              ctx=Load()),
+            args=[],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='t1', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='sb', ctx=Load()),
+              attr='let',
+              ctx=Load()),
+            args=[
+              Constant(value='t1'),
+              Call(
+                func=Attribute(
+                  value=Name(id='relay', ctx=Load()),
+                  attr='log',
+                  ctx=Load()),
+                args=[
+                  Name(id='x', ctx=Load())],
+                keywords=[])],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='t2', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='sb', ctx=Load()),
+              attr='let',
+              ctx=Load()),
+            args=[
+              Constant(value='t2'),
+              Call(
+                func=Attribute(
+                  value=Name(id='relay', ctx=Load()),
+                  attr='add',
+                  ctx=Load()),
+                args=[
+                  Name(id='t1', ctx=Load()),
+                  Name(id='x', ctx=Load())],
+                keywords=[])],
+            keywords=[])),
+        Expr(
+          value=Call(
+            func=Attribute(
+              value=Name(id='sb', ctx=Load()),
+              attr='ret',
+              ctx=Load()),
+            args=[
+              Name(id='t2', ctx=Load())],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='f', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='Function',
+              ctx=Load()),
+            args=[
+              List(
+                elts=[
+                  Name(id='x', ctx=Load())],
+                ctx=Load()),
+              Call(
+                func=Attribute(
+                  value=Name(id='sb', ctx=Load()),
+                  attr='get',
+                  ctx=Load()),
+                args=[],
+                keywords=[])],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='fchecked', ctx=Store())],
+          value=Call(
+            func=Name(id='run_infer_type', ctx=Load()),
+            args=[
+              Name(id='f', ctx=Load())],
+            keywords=[])),
+        Assert(
+          test=Compare(
+            left=Attribute(
+              value=Name(id='fchecked', ctx=Load()),
+              attr='checked_type',
+              ctx=Load()),
+            ops=[
+              Eq()],
+            comparators=[
+              Call(
+                func=Attribute(
+                  value=Name(id='relay', ctx=Load()),
+                  attr='FuncType',
+                  ctx=Load()),
+                args=[
+                  List(
+                    elts=[
+                      Name(id='tp', ctx=Load())],
+                    ctx=Load()),
+                  Name(id='tp', ctx=Load())],
+                keywords=[])]))],
+      decorator_list=[]),
+    FunctionDef(
+      name='test_decl',
+      args=arguments(
+        posonlyargs=[],
+        args=[],
+        kwonlyargs=[],
+        kw_defaults=[],
+        defaults=[]),
+      body=[
+        Expr(
+          value=Constant(value='Program:\n    def @f(%x : Tensor[(10, 10), float32]) {\n        log(%x)\n    }\n    ')),
+        Assign(
+          targets=[
+            Name(id='tp', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='TensorType',
+              ctx=Load()),
+            args=[
+              Tuple(
+                elts=[
+                  Constant(value=10),
+                  Constant(value=10)],
+                ctx=Load())],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='x', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='var',
+              ctx=Load()),
+            args=[
+              Constant(value='x'),
+              Name(id='tp', ctx=Load())],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='f', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='Function',
+              ctx=Load()),
+            args=[
+              List(
+                elts=[
+                  Name(id='x', ctx=Load())],
+                ctx=Load()),
+              Call(
+                func=Attribute(
+                  value=Name(id='relay', ctx=Load()),
+                  attr='log',
+                  ctx=Load()),
+                args=[
+                  Name(id='x', ctx=Load())],
+                keywords=[])],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='fchecked', ctx=Store())],
+          value=Call(
+            func=Name(id='run_infer_type', ctx=Load()),
+            args=[
+              Name(id='f', ctx=Load())],
+            keywords=[])),
+        Assert(
+          test=Compare(
+            left=Attribute(
+              value=Name(id='fchecked', ctx=Load()),
+              attr='checked_type',
+              ctx=Load()),
+            ops=[
+              Eq()],
+            comparators=[
+              Call(
+                func=Attribute(
+                  value=Name(id='relay', ctx=Load()),
+                  attr='FuncType',
+                  ctx=Load()),
+                args=[
+                  List(
+                    elts=[
+                      Name(id='tp', ctx=Load())],
+                    ctx=Load()),
+                  Name(id='tp', ctx=Load())],
+                keywords=[])]))],
+      decorator_list=[]),
+    FunctionDef(
+      name='test_recursion',
+      args=arguments(
+        posonlyargs=[],
+        args=[],
+        kwonlyargs=[],
+        kw_defaults=[],
+        defaults=[]),
+      body=[
+        Expr(
+          value=Constant(value='\n    Program:\n       def @f(%n: int32, %data: float32) -> float32 {\n          if (%n == 0) {\n              %data\n          } else {\n              @f(%n - 1, log(%data))\n          }\n       }\n    ')),
+        Assign(
+          targets=[
+            Name(id='sb', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='ScopeBuilder',
+              ctx=Load()),
+            args=[],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='f', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='GlobalVar',
+              ctx=Load()),
+            args=[
+              Constant(value='f')],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='ti32', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='scalar_type',
+              ctx=Load()),
+            args=[
+              Constant(value='int32')],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='tf32', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='scalar_type',
+              ctx=Load()),
+            args=[
+              Constant(value='float32')],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='n', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='var',
+              ctx=Load()),
+            args=[
+              Constant(value='n'),
+              Name(id='ti32', ctx=Load())],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='data', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='var',
+              ctx=Load()),
+            args=[
+              Constant(value='data'),
+              Name(id='tf32', ctx=Load())],
+            keywords=[])),
+        With(
+          items=[
+            withitem(
+              context_expr=Call(
+                func=Attribute(
+                  value=Name(id='sb', ctx=Load()),
+                  attr='if_scope',
+                  ctx=Load()),
+                args=[
+                  Call(
+                    func=Attribute(
+                      value=Name(id='relay', ctx=Load()),
+                      attr='equal',
+                      ctx=Load()),
+                    args=[
+                      Name(id='n', ctx=Load()),
+                      Call(
+                        func=Attribute(
+                          value=Name(id='relay', ctx=Load()),
+                          attr='const',
+                          ctx=Load()),
+                        args=[
+                          Constant(value=0),
+                          Name(id='ti32', ctx=Load())],
+                        keywords=[])],
+                    keywords=[])],
+                keywords=[]))],
+          body=[
+            Expr(
+              value=Call(
+                func=Attribute(
+                  value=Name(id='sb', ctx=Load()),
+                  attr='ret',
+                  ctx=Load()),
+                args=[
+                  Name(id='data', ctx=Load())],
+                keywords=[]))]),
+        With(
+          items=[
+            withitem(
+              context_expr=Call(
+                func=Attribute(
+                  value=Name(id='sb', ctx=Load()),
+                  attr='else_scope',
+                  ctx=Load()),
+                args=[],
+                keywords=[]))],
+          body=[
+            Expr(
+              value=Call(
+                func=Attribute(
+                  value=Name(id='sb', ctx=Load()),
+                  attr='ret',
+                  ctx=Load()),
+                args=[
+                  Call(
+                    func=Name(id='f', ctx=Load()),
+                    args=[
+                      Call(
+                        func=Attribute(
+                          value=Name(id='relay', ctx=Load()),
+                          attr='subtract',
+                          ctx=Load()),
+                        args=[
+                          Name(id='n', ctx=Load()),
+                          Call(
+                            func=Attribute(
+                              value=Name(id='relay', ctx=Load()),
+                              attr='const',
+                              ctx=Load()),
+                            args=[
+                              Constant(value=1),
+                              Name(id='ti32', ctx=Load())],
+                            keywords=[])],
+                        keywords=[]),
+                      Call(
+                        func=Attribute(
+                          value=Name(id='relay', ctx=Load()),
+                          attr='log',
+                          ctx=Load()),
+                        args=[
+                          Name(id='data', ctx=Load())],
+                        keywords=[])],
+                    keywords=[])],
+                keywords=[]))]),
+        Assign(
+          targets=[
+            Name(id='mod', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='tvm', ctx=Load()),
+              attr='IRModule',
+              ctx=Load()),
+            args=[],
+            keywords=[])),
+        Assign(
+          targets=[
+            Subscript(
+              value=Name(id='mod', ctx=Load()),
+              slice=Name(id='f', ctx=Load()),
+              ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='Function',
+              ctx=Load()),
+            args=[
+              List(
+                elts=[
+                  Name(id='n', ctx=Load()),
+                  Name(id='data', ctx=Load())],
+                ctx=Load()),
+              Call(
+                func=Attribute(
+                  value=Name(id='sb', ctx=Load()),
+                  attr='get',
+                  ctx=Load()),
+                args=[],
+                keywords=[])],
+            keywords=[])),
+        Assert(
+          test=Compare(
+            left=Constant(value='@f(%1, %2) /* ty=float32 */'),
+            ops=[
+              In()],
+            comparators=[
+              Call(
+                func=Attribute(
+                  value=Name(id='mod', ctx=Load()),
+                  attr='astext',
+                  ctx=Load()),
+                args=[],
+                keywords=[])])),
+        Assert(
+          test=Compare(
+            left=Attribute(
+              value=Subscript(
+                value=Name(id='mod', ctx=Load()),
+                slice=Name(id='f', ctx=Load()),
+                ctx=Load()),
+              attr='checked_type',
+              ctx=Load()),
+            ops=[
+              Eq()],
+            comparators=[
+              Call(
+                func=Attribute(
+                  value=Name(id='relay', ctx=Load()),
+                  attr='FuncType',
+                  ctx=Load()),
+                args=[
+                  List(
+                    elts=[
+                      Name(id='ti32', ctx=Load()),
+                      Name(id='tf32', ctx=Load())],
+                    ctx=Load()),
+                  Name(id='tf32', ctx=Load())],
+                keywords=[])]))],
+      decorator_list=[]),
+    FunctionDef(
+      name='test_incomplete_call',
+      args=arguments(
+        posonlyargs=[],
+        args=[],
+        kwonlyargs=[],
+        kw_defaults=[],
+        defaults=[]),
+      body=[
+        Assign(
+          targets=[
+            Name(id='tt', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='scalar_type',
+              ctx=Load()),
+            args=[
+              Constant(value='int32')],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='x', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='var',
+              ctx=Load()),
+            args=[
+              Constant(value='x'),
+              Name(id='tt', ctx=Load())],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='f', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='var',
+              ctx=Load()),
+            args=[
+              Constant(value='f')],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='func', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='Function',
+              ctx=Load()),
+            args=[
+              List(
+                elts=[
+                  Name(id='x', ctx=Load()),
+                  Name(id='f', ctx=Load())],
+                ctx=Load()),
+              Call(
+                func=Attribute(
+                  value=Name(id='relay', ctx=Load()),
+                  attr='Call',
+                  ctx=Load()),
+                args=[
+                  Name(id='f', ctx=Load()),
+                  List(
+                    elts=[
+                      Name(id='x', ctx=Load())],
+                    ctx=Load())],
+                keywords=[]),
+              Name(id='tt', ctx=Load())],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='ft', ctx=Store())],
+          value=Call(
+            func=Name(id='run_infer_type', ctx=Load()),
+            args=[
+              Name(id='func', ctx=Load())],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='f_type', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='FuncType',
+              ctx=Load()),
+            args=[
+              List(
+                elts=[
+                  Name(id='tt', ctx=Load())],
+                ctx=Load()),
+              Name(id='tt', ctx=Load())],
+            keywords=[])),
+        Assert(
+          test=Compare(
+            left=Attribute(
+              value=Name(id='ft', ctx=Load()),
+              attr='checked_type',
+              ctx=Load()),
+            ops=[
+              Eq()],
+            comparators=[
+              Call(
+                func=Attribute(
+                  value=Name(id='relay', ctx=Load()),
+                  attr='FuncType',
+                  ctx=Load()),
+                args=[
+                  List(
+                    elts=[
+                      Name(id='tt', ctx=Load()),
+                      Name(id='f_type', ctx=Load())],
+                    ctx=Load()),
+                  Name(id='tt', ctx=Load())],
+                keywords=[])]))],
+      decorator_list=[]),
+    FunctionDef(
+      name='test_higher_order_argument',
+      args=arguments(
+        posonlyargs=[],
+        args=[],
+        kwonlyargs=[],
+        kw_defaults=[],
+        defaults=[]),
+      body=[
+        Assign(
+          targets=[
+            Name(id='a', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='TypeVar',
+              ctx=Load()),
+            args=[
+              Constant(value='a')],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='x', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='Var',
+              ctx=Load()),
+            args=[
+              Constant(value='x'),
+              Name(id='a', ctx=Load())],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='id_func', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='Function',
+              ctx=Load()),
+            args=[
+              List(
+                elts=[
+                  Name(id='x', ctx=Load())],
+                ctx=Load()),
+              Name(id='x', ctx=Load()),
+              Name(id='a', ctx=Load()),
+              List(
+                elts=[
+                  Name(id='a', ctx=Load())],
+                ctx=Load())],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='b', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='TypeVar',
+              ctx=Load()),
+            args=[
+              Constant(value='b')],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='f', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='Var',
+              ctx=Load()),
+            args=[
+              Constant(value='f'),
+              Call(
+                func=Attribute(
+                  value=Name(id='relay', ctx=Load()),
+                  attr='FuncType',
+                  ctx=Load()),
+                args=[
+                  List(
+                    elts=[
+                      Name(id='b', ctx=Load())],
+                    ctx=Load()),
+                  Name(id='b', ctx=Load())],
+                keywords=[])],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='y', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='Var',
+              ctx=Load()),
+            args=[
+              Constant(value='y'),
+              Name(id='b', ctx=Load())],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='ho_func', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='Function',
+              ctx=Load()),
+            args=[
+              List(
+                elts=[
+                  Name(id='f', ctx=Load()),
+                  Name(id='y', ctx=Load())],
+                ctx=Load()),
+              Call(
+                func=Name(id='f', ctx=Load()),
+                args=[
+                  Name(id='y', ctx=Load())],
+                keywords=[]),
+              Name(id='b', ctx=Load()),
+              List(
+                elts=[
+                  Name(id='b', ctx=Load())],
+                ctx=Load())],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='ho_call', ctx=Store())],
+          value=Call(
+            func=Name(id='ho_func', ctx=Load()),
+            args=[
+              Name(id='id_func', ctx=Load()),
+              Call(
+                func=Attribute(
+                  value=Name(id='relay', ctx=Load()),
+                  attr='const',
+                  ctx=Load()),
+                args=[
+                  Constant(value=0),
+                  Constant(value='int32')],
+                keywords=[])],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='hc', ctx=Store())],
+          value=Call(
+            func=Name(id='run_infer_type', ctx=Load()),
+            args=[
+              Name(id='ho_call', ctx=Load())],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='expected', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='scalar_type',
+              ctx=Load()),
+            args=[
+              Constant(value='int32')],
+            keywords=[])),
+        Assert(
+          test=Compare(
+            left=Attribute(
+              value=Name(id='hc', ctx=Load()),
+              attr='checked_type',
+              ctx=Load()),
+            ops=[
+              Eq()],
+            comparators=[
+              Name(id='expected', ctx=Load())]))],
+      decorator_list=[]),
+    FunctionDef(
+      name='test_higher_order_return',
+      args=arguments(
+        posonlyargs=[],
+        args=[],
+        kwonlyargs=[],
+        kw_defaults=[],
+        defaults=[]),
+      body=[
+        Assign(
+          targets=[
+            Name(id='a', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='TypeVar',
+              ctx=Load()),
+            args=[
+              Constant(value='a')],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='x', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='Var',
+              ctx=Load()),
+            args=[
+              Constant(value='x'),
+              Name(id='a', ctx=Load())],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='id_func', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='Function',
+              ctx=Load()),
+            args=[
+              List(
+                elts=[
+                  Name(id='x', ctx=Load())],
+                ctx=Load()),
+              Name(id='x', ctx=Load()),
+              Name(id='a', ctx=Load()),
+              List(
+                elts=[
+                  Name(id='a', ctx=Load())],
+                ctx=Load())],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='b', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='TypeVar',
+              ctx=Load()),
+            args=[
+              Constant(value='b')],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='nested_id', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='Function',
+              ctx=Load()),
+            args=[
+              List(elts=[], ctx=Load()),
+              Name(id='id_func', ctx=Load()),
+              Call(
+                func=Attribute(
+                  value=Name(id='relay', ctx=Load()),
+                  attr='FuncType',
+                  ctx=Load()),
+                args=[
+                  List(
+                    elts=[
+                      Name(id='b', ctx=Load())],
+                    ctx=Load()),
+                  Name(id='b', ctx=Load())],
+                keywords=[]),
+              List(
+                elts=[
+                  Name(id='b', ctx=Load())],
+                ctx=Load())],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='ft', ctx=Store())],
+          value=Call(
+            func=Name(id='run_infer_type', ctx=Load()),
+            args=[
+              Name(id='nested_id', ctx=Load())],
+            keywords=[])),
+        Assert(
+          test=Compare(
+            left=Attribute(
+              value=Name(id='ft', ctx=Load()),
+              attr='checked_type',
+              ctx=Load()),
+            ops=[
+              Eq()],
+            comparators=[
+              Call(
+                func=Attribute(
+                  value=Name(id='relay', ctx=Load()),
+                  attr='FuncType',
+                  ctx=Load()),
+                args=[
+                  List(elts=[], ctx=Load()),
+                  Call(
+                    func=Attribute(
+                      value=Name(id='relay', ctx=Load()),
+                      attr='FuncType',
+                      ctx=Load()),
+                    args=[
+                      List(
+                        elts=[
+                          Name(id='b', ctx=Load())],
+                        ctx=Load()),
+                      Name(id='b', ctx=Load())],
+                    keywords=[]),
+                  List(
+                    elts=[
+                      Name(id='b', ctx=Load())],
+                    ctx=Load())],
+                keywords=[])]))],
+      decorator_list=[]),
+    FunctionDef(
+      name='test_higher_order_nested',
+      args=arguments(
+        posonlyargs=[],
+        args=[],
+        kwonlyargs=[],
+        kw_defaults=[],
+        defaults=[]),
+      body=[
+        Assign(
+          targets=[
+            Name(id='a', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='TypeVar',
+              ctx=Load()),
+            args=[
+              Constant(value='a')],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='x', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='Var',
+              ctx=Load()),
+            args=[
+              Constant(value='x'),
+              Name(id='a', ctx=Load())],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='id_func', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='Function',
+              ctx=Load()),
+            args=[
+              List(
+                elts=[
+                  Name(id='x', ctx=Load())],
+                ctx=Load()),
+              Name(id='x', ctx=Load()),
+              Name(id='a', ctx=Load()),
+              List(
+                elts=[
+                  Name(id='a', ctx=Load())],
+                ctx=Load())],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='choice_t', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='FuncType',
+              ctx=Load()),
+            args=[
+              List(elts=[], ctx=Load()),
+              Call(
+                func=Attribute(
+                  value=Name(id='relay', ctx=Load()),
+                  attr='scalar_type',
+                  ctx=Load()),
+                args=[
+                  Constant(value='bool')],
+                keywords=[])],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='f', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='Var',
+              ctx=Load()),
+            args=[
+              Constant(value='f'),
+              Name(id='choice_t', ctx=Load())],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='b', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='TypeVar',
+              ctx=Load()),
+            args=[
+              Constant(value='b')],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='z', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='Var',
+              ctx=Load()),
+            args=[
+              Constant(value='z')],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='top', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='Function',
+              ctx=Load()),
+            args=[
+              List(
+                elts=[
+                  Name(id='f', ctx=Load())],
+                ctx=Load()),
+              Call(
+                func=Attribute(
+                  value=Name(id='relay', ctx=Load()),
+                  attr='If',
+                  ctx=Load()),
+                args=[
+                  Call(
+                    func=Name(id='f', ctx=Load()),
+                    args=[],
+                    keywords=[]),
+                  Name(id='id_func', ctx=Load()),
+                  Call(
+                    func=Attribute(
+                      value=Name(id='relay', ctx=Load()),
+                      attr='Function',
+                      ctx=Load()),
+                    args=[
+                      List(
+                        elts=[
+                          Name(id='z', ctx=Load())],
+                        ctx=Load()),
+                      Name(id='z', ctx=Load())],
+                    keywords=[])],
+                keywords=[]),
+              Call(
+                func=Attribute(
+                  value=Name(id='relay', ctx=Load()),
+                  attr='FuncType',
+                  ctx=Load()),
+                args=[
+                  List(
+                    elts=[
+                      Name(id='b', ctx=Load())],
+                    ctx=Load()),
+                  Name(id='b', ctx=Load())],
+                keywords=[]),
+              List(
+                elts=[
+                  Name(id='b', ctx=Load())],
+                ctx=Load())],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='expected', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='FuncType',
+              ctx=Load()),
+            args=[
+              List(
+                elts=[
+                  Name(id='choice_t', ctx=Load())],
+                ctx=Load()),
+              Call(
+                func=Attribute(
+                  value=Name(id='relay', ctx=Load()),
+                  attr='FuncType',
+                  ctx=Load()),
+                args=[
+                  List(
+                    elts=[
+                      Name(id='b', ctx=Load())],
+                    ctx=Load()),
+                  Name(id='b', ctx=Load())],
+                keywords=[]),
+              List(
+                elts=[
+                  Name(id='b', ctx=Load())],
+                ctx=Load())],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='ft', ctx=Store())],
+          value=Call(
+            func=Name(id='run_infer_type', ctx=Load()),
+            args=[
+              Name(id='top', ctx=Load())],
+            keywords=[])),
+        Assert(
+          test=Compare(
+            left=Attribute(
+              value=Name(id='ft', ctx=Load()),
+              attr='checked_type',
+              ctx=Load()),
+            ops=[
+              Eq()],
+            comparators=[
+              Name(id='expected', ctx=Load())]))],
+      decorator_list=[]),
+    FunctionDef(
+      name='test_tuple',
+      args=arguments(
+        posonlyargs=[],
+        args=[],
+        kwonlyargs=[],
+        kw_defaults=[],
+        defaults=[]),
+      body=[
+        Assign(
+          targets=[
+            Name(id='tp', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='TensorType',
+              ctx=Load()),
+            args=[
+              Tuple(
+                elts=[
+                  Constant(value=10)],
+                ctx=Load())],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='x', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='var',
+              ctx=Load()),
+            args=[
+              Constant(value='x'),
+              Name(id='tp', ctx=Load())],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='res', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='Tuple',
+              ctx=Load()),
+            args=[
+              List(
+                elts=[
+                  Name(id='x', ctx=Load()),
+                  Name(id='x', ctx=Load())],
+                ctx=Load())],
+            keywords=[])),
+        Assert(
+          test=Compare(
+            left=Attribute(
+              value=Call(
+                func=Name(id='run_infer_type', ctx=Load()),
+                args=[
+                  Name(id='res', ctx=Load())],
+                keywords=[]),
+              attr='checked_type',
+              ctx=Load()),
+            ops=[
+              Eq()],
+            comparators=[
+              Call(
+                func=Attribute(
+                  value=Name(id='relay', ctx=Load()),
+                  attr='TupleType',
+                  ctx=Load()),
+                args=[
+                  List(
+                    elts=[
+                      Name(id='tp', ctx=Load()),
+                      Name(id='tp', ctx=Load())],
+                    ctx=Load())],
+                keywords=[])]))],
+      decorator_list=[]),
+    FunctionDef(
+      name='test_ref',
+      args=arguments(
+        posonlyargs=[],
+        args=[],
+        kwonlyargs=[],
+        kw_defaults=[],
+        defaults=[]),
+      body=[
+        Assign(
+          targets=[
+            Name(id='x', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='var',
+              ctx=Load()),
+            args=[
+              Constant(value='x'),
+              Constant(value='float32')],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='y', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='var',
+              ctx=Load()),
+            args=[
+              Constant(value='y'),
+              Constant(value='float32')],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='r', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='RefCreate',
+              ctx=Load()),
+            args=[
+              Name(id='x', ctx=Load())],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='st', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='scalar_type',
+              ctx=Load()),
+            args=[
+              Constant(value='float32')],
+            keywords=[])),
+        Assert(
+          test=Compare(
+            left=Attribute(
+              value=Call(
+                func=Name(id='run_infer_type', ctx=Load()),
+                args=[
+                  Name(id='r', ctx=Load())],
+                keywords=[]),
+              attr='checked_type',
+              ctx=Load()),
+            ops=[
+              Eq()],
+            comparators=[
+              Call(
+                func=Attribute(
+                  value=Name(id='relay', ctx=Load()),
+                  attr='RefType',
+                  ctx=Load()),
+                args=[
+                  Name(id='st', ctx=Load())],
+                keywords=[])])),
+        Assign(
+          targets=[
+            Name(id='g', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='RefRead',
+              ctx=Load()),
+            args=[
+              Name(id='r', ctx=Load())],
+            keywords=[])),
+        Assert(
+          test=Compare(
+            left=Attribute(
+              value=Call(
+                func=Name(id='run_infer_type', ctx=Load()),
+                args=[
+                  Name(id='g', ctx=Load())],
+                keywords=[]),
+              attr='checked_type',
+              ctx=Load()),
+            ops=[
+              Eq()],
+            comparators=[
+              Name(id='st', ctx=Load())])),
+        Assign(
+          targets=[
+            Name(id='w', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='RefWrite',
+              ctx=Load()),
+            args=[
+              Name(id='r', ctx=Load()),
+              Name(id='y', ctx=Load())],
+            keywords=[])),
+        Assert(
+          test=Compare(
+            left=Attribute(
+              value=Call(
+                func=Name(id='run_infer_type', ctx=Load()),
+                args=[
+                  Name(id='w', ctx=Load())],
+                keywords=[]),
+              attr='checked_type',
+              ctx=Load()),
+            ops=[
+              Eq()],
+            comparators=[
+              Call(
+                func=Attribute(
+                  value=Name(id='relay', ctx=Load()),
+                  attr='TupleType',
+                  ctx=Load()),
+                args=[
+                  List(elts=[], ctx=Load())],
+                keywords=[])]))],
+      decorator_list=[]),
+    FunctionDef(
+      name='test_free_expr',
+      args=arguments(
+        posonlyargs=[],
+        args=[],
+        kwonlyargs=[],
+        kw_defaults=[],
+        defaults=[]),
+      body=[
+        Return(),
+        Assign(
+          targets=[
+            Name(id='x', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='var',
+              ctx=Load()),
+            args=[
+              Constant(value='x'),
+              Constant(value='float32')],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='y', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='add',
+              ctx=Load()),
+            args=[
+              Name(id='x', ctx=Load()),
+              Name(id='x', ctx=Load())],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='yy', ctx=Store())],
+          value=Call(
+            func=Name(id='run_infer_type', ctx=Load()),
+            args=[
+              Name(id='y', ctx=Load())],
+            keywords=[])),
+        Assert(
+          test=Compare(
+            left=Attribute(
+              value=Name(id='yy', ctx=Load()),
+              attr='checked_type',
+              ctx=Load()),
+            ops=[
+              Eq()],
+            comparators=[
+              Call(
+                func=Attribute(
+                  value=Name(id='relay', ctx=Load()),
+                  attr='scalar_type',
+                  ctx=Load()),
+                args=[
+                  Constant(value='float32')],
+                keywords=[])])),
+        Assert(
+          test=Call(
+            func=Attribute(
+              value=Attribute(
+                value=Name(id='x', ctx=Load()),
+                attr='vid',
+                ctx=Load()),
+              attr='same_as',
+              ctx=Load()),
+            args=[
+              Attribute(
+                value=Subscript(
+                  value=Attribute(
+                    value=Name(id='yy', ctx=Load()),
+                    attr='args',
+                    ctx=Load()),
+                  slice=Constant(value=0),
+                  ctx=Load()),
+                attr='vid',
+                ctx=Load())],
+            keywords=[]))],
+      decorator_list=[]),
+    FunctionDef(
+      name='test_type_args',
+      args=arguments(
+        posonlyargs=[],
+        args=[],
+        kwonlyargs=[],
+        kw_defaults=[],
+        defaults=[]),
+      body=[
+        Assign(
+          targets=[
+            Name(id='x', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='var',
+              ctx=Load()),
+            args=[
+              Constant(value='x')],
+            keywords=[
+              keyword(
+                arg='shape',
+                value=Tuple(
+                  elts=[
+                    Constant(value=10),
+                    Constant(value=10)],
+                  ctx=Load()))])),
+        Assign(
+          targets=[
+            Name(id='y', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='var',
+              ctx=Load()),
+            args=[
+              Constant(value='y')],
+            keywords=[
+              keyword(
+                arg='shape',
+                value=Tuple(
+                  elts=[
+                    Constant(value=1),
+                    Constant(value=10)],
+                  ctx=Load()))])),
+        Assign(
+          targets=[
+            Name(id='z', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='add',
+              ctx=Load()),
+            args=[
+              Name(id='x', ctx=Load()),
+              Name(id='y', ctx=Load())],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='ty_z', ctx=Store())],
+          value=Call(
+            func=Name(id='run_infer_type', ctx=Load()),
+            args=[
+              Name(id='z', ctx=Load())],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='ty_args', ctx=Store())],
+          value=Attribute(
+            value=Name(id='ty_z', ctx=Load()),
+            attr='type_args',
+            ctx=Load())),
+        Assert(
+          test=Compare(
+            left=Call(
+              func=Name(id='len', ctx=Load()),
+              args=[
+                Name(id='ty_args', ctx=Load())],
+              keywords=[]),
+            ops=[
+              Eq()],
+            comparators=[
+              Constant(value=2)])),
+        Assert(
+          test=Compare(
+            left=Attribute(
+              value=Subscript(
+                value=Name(id='ty_args', ctx=Load()),
+                slice=Constant(value=0),
+                ctx=Load()),
+              attr='dtype',
+              ctx=Load()),
+            ops=[
+              Eq()],
+            comparators=[
+              Constant(value='float32')])),
+        Assert(
+          test=Compare(
+            left=Attribute(
+              value=Subscript(
+                value=Name(id='ty_args', ctx=Load()),
+                slice=Constant(value=1),
+                ctx=Load()),
+              attr='dtype',
+              ctx=Load()),
+            ops=[
+              Eq()],
+            comparators=[
+              Constant(value='float32')])),
+        Assign(
+          targets=[
+            Name(id='sh1', ctx=Store())],
+          value=Attribute(
+            value=Subscript(
+              value=Name(id='ty_args', ctx=Load()),
+              slice=Constant(value=0),
+              ctx=Load()),
+            attr='shape',
+            ctx=Load())),
+        Assign(
+          targets=[
+            Name(id='sh2', ctx=Store())],
+          value=Attribute(
+            value=Subscript(
+              value=Name(id='ty_args', ctx=Load()),
+              slice=Constant(value=1),
+              ctx=Load()),
+            attr='shape',
+            ctx=Load())),
+        Assert(
+          test=Compare(
+            left=Attribute(
+              value=Subscript(
+                value=Name(id='sh1', ctx=Load()),
+                slice=Constant(value=0),
+                ctx=Load()),
+              attr='value',
+              ctx=Load()),
+            ops=[
+              Eq()],
+            comparators=[
+              Constant(value=10)])),
+        Assert(
+          test=Compare(
+            left=Attribute(
+              value=Subscript(
+                value=Name(id='sh1', ctx=Load()),
+                slice=Constant(value=1),
+                ctx=Load()),
+              attr='value',
+              ctx=Load()),
+            ops=[
+              Eq()],
+            comparators=[
+              Constant(value=10)])),
+        Assert(
+          test=Compare(
+            left=Attribute(
+              value=Subscript(
+                value=Name(id='sh2', ctx=Load()),
+                slice=Constant(value=0),
+                ctx=Load()),
+              attr='value',
+              ctx=Load()),
+            ops=[
+              Eq()],
+            comparators=[
+              Constant(value=1)])),
+        Assert(
+          test=Compare(
+            left=Attribute(
+              value=Subscript(
+                value=Name(id='sh2', ctx=Load()),
+                slice=Constant(value=1),
+                ctx=Load()),
+              attr='value',
+              ctx=Load()),
+            ops=[
+              Eq()],
+            comparators=[
+              Constant(value=10)]))],
+      decorator_list=[]),
+    FunctionDef(
+      name='test_global_var_recursion',
+      args=arguments(
+        posonlyargs=[],
+        args=[],
+        kwonlyargs=[],
+        kw_defaults=[],
+        defaults=[]),
+      body=[
+        Assign(
+          targets=[
+            Name(id='mod', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='tvm', ctx=Load()),
+              attr='IRModule',
+              ctx=Load()),
+            args=[
+              Dict(keys=[], values=[])],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='gv', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='GlobalVar',
+              ctx=Load()),
+            args=[
+              Constant(value='main')],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='x', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='var',
+              ctx=Load()),
+            args=[
+              Constant(value='x')],
+            keywords=[
+              keyword(
+                arg='shape',
+                value=List(elts=[], ctx=Load()))])),
+        Assign(
+          targets=[
+            Name(id='tt', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='scalar_type',
+              ctx=Load()),
+            args=[
+              Constant(value='float32')],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='func', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='Function',
+              ctx=Load()),
+            args=[
+              List(
+                elts=[
+                  Name(id='x', ctx=Load())],
+                ctx=Load()),
+              Call(
+                func=Attribute(
+                  value=Name(id='relay', ctx=Load()),
+                  attr='Call',
+                  ctx=Load()),
+                args=[
+                  Name(id='gv', ctx=Load()),
+                  List(
+                    elts=[
+                      Name(id='x', ctx=Load())],
+                    ctx=Load())],
+                keywords=[]),
+              Name(id='tt', ctx=Load())],
+            keywords=[])),
+        Assign(
+          targets=[
+            Subscript(
+              value=Name(id='mod', ctx=Load()),
+              slice=Name(id='gv', ctx=Load()),
+              ctx=Store())],
+          value=Name(id='func', ctx=Load())),
+        Assign(
+          targets=[
+            Name(id='ft', ctx=Store())],
+          value=Call(
+            func=Name(id='run_infer_type', ctx=Load()),
+            args=[
+              Name(id='gv', ctx=Load()),
+              Name(id='mod', ctx=Load())],
+            keywords=[])),
+        Assert(
+          test=Compare(
+            left=Attribute(
+              value=Name(id='ft', ctx=Load()),
+              attr='checked_type',
+              ctx=Load()),
+            ops=[
+              Eq()],
+            comparators=[
+              Call(
+                func=Attribute(
+                  value=Name(id='relay', ctx=Load()),
+                  attr='FuncType',
+                  ctx=Load()),
+                args=[
+                  List(
+                    elts=[
+                      Name(id='tt', ctx=Load())],
+                    ctx=Load()),
+                  Name(id='tt', ctx=Load())],
+                keywords=[])]))],
+      decorator_list=[]),
+    FunctionDef(
+      name='test_equal',
+      args=arguments(
+        posonlyargs=[],
+        args=[],
+        kwonlyargs=[],
+        kw_defaults=[],
+        defaults=[]),
+      body=[
+        Assign(
+          targets=[
+            Name(id='i', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='var',
+              ctx=Load()),
+            args=[
+              Constant(value='i')],
+            keywords=[
+              keyword(
+                arg='shape',
+                value=List(elts=[], ctx=Load())),
+              keyword(
+                arg='dtype',
+                value=Constant(value='int32'))])),
+        Assign(
+          targets=[
+            Name(id='eq', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='op', ctx=Load()),
+              attr='equal',
+              ctx=Load()),
+            args=[
+              Name(id='i', ctx=Load()),
+              Call(
+                func=Attribute(
+                  value=Name(id='relay', ctx=Load()),
+                  attr='const',
+                  ctx=Load()),
+                args=[
+                  Constant(value=0)],
+                keywords=[
+                  keyword(
+                    arg='dtype',
+                    value=Constant(value='int32'))])],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='func', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='Function',
+              ctx=Load()),
+            args=[
+              List(
+                elts=[
+                  Name(id='i', ctx=Load())],
+                ctx=Load()),
+              Name(id='eq', ctx=Load())],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='ft', ctx=Store())],
+          value=Call(
+            func=Name(id='run_infer_type', ctx=Load()),
+            args=[
+              Name(id='func', ctx=Load())],
+            keywords=[])),
+        Assert(
+          test=Compare(
+            left=Attribute(
+              value=Name(id='ft', ctx=Load()),
+              attr='checked_type',
+              ctx=Load()),
+            ops=[
+              Eq()],
+            comparators=[
+              Call(
+                func=Attribute(
+                  value=Name(id='relay', ctx=Load()),
+                  attr='FuncType',
+                  ctx=Load()),
+                args=[
+                  List(
+                    elts=[
+                      Call(
+                        func=Attribute(
+                          value=Name(id='relay', ctx=Load()),
+                          attr='scalar_type',
+                          ctx=Load()),
+                        args=[
+                          Constant(value='int32')],
+                        keywords=[])],
+                    ctx=Load()),
+                  Call(
+                    func=Attribute(
+                      value=Name(id='relay', ctx=Load()),
+                      attr='scalar_type',
+                      ctx=Load()),
+                    args=[
+                      Constant(value='bool')],
+                    keywords=[])],
+                keywords=[])]))],
+      decorator_list=[]),
+    FunctionDef(
+      name='test_constructor_type',
+      args=arguments(
+        posonlyargs=[],
+        args=[],
+        kwonlyargs=[],
+        kw_defaults=[],
+        defaults=[]),
+      body=[
+        Assign(
+          targets=[
+            Name(id='mod', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='tvm', ctx=Load()),
+              attr='IRModule',
+              ctx=Load()),
+            args=[],
+            keywords=[])),
+        Assign(
+          targets=[
+            Tuple(
+              elts=[
+                Name(id='box', ctx=Store()),
+                Name(id='constructor', ctx=Store())],
+              ctx=Store())],
+          value=Call(
+            func=Name(id='initialize_box_adt', ctx=Load()),
+            args=[
+              Name(id='mod', ctx=Load())],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='a', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='TypeVar',
+              ctx=Load()),
+            args=[
+              Constant(value='a')],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='x', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='Var',
+              ctx=Load()),
+            args=[
+              Constant(value='x'),
+              Name(id='a', ctx=Load())],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='ct', ctx=Store())],
+          value=Call(
+            func=Name(id='run_infer_type', ctx=Load()),
+            args=[
+              Call(
+                func=Attribute(
+                  value=Name(id='relay', ctx=Load()),
+                  attr='Function',
+                  ctx=Load()),
+                args=[
+                  List(
+                    elts=[
+                      Name(id='x', ctx=Load())],
+                    ctx=Load()),
+                  Call(
+                    func=Name(id='constructor', ctx=Load()),
+                    args=[
+                      Name(id='x', ctx=Load())],
+                    keywords=[]),
+                  Call(
+                    func=Name(id='box', ctx=Load()),
+                    args=[
+                      Name(id='a', ctx=Load())],
+                    keywords=[]),
+                  List(
+                    elts=[
+                      Name(id='a', ctx=Load())],
+                    ctx=Load())],
+                keywords=[]),
+              Name(id='mod', ctx=Load())],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='expected', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='FuncType',
+              ctx=Load()),
+            args=[
+              List(
+                elts=[
+                  Name(id='a', ctx=Load())],
+                ctx=Load()),
+              Call(
+                func=Name(id='box', ctx=Load()),
+                args=[
+                  Name(id='a', ctx=Load())],
+                keywords=[]),
+              List(
+                elts=[
+                  Name(id='a', ctx=Load())],
+                ctx=Load())],
+            keywords=[])),
+        Assert(
+          test=Compare(
+            left=Attribute(
+              value=Name(id='ct', ctx=Load()),
+              attr='checked_type',
+              ctx=Load()),
+            ops=[
+              Eq()],
+            comparators=[
+              Name(id='expected', ctx=Load())]))],
+      decorator_list=[]),
+    FunctionDef(
+      name='test_constructor_call',
+      args=arguments(
+        posonlyargs=[],
+        args=[],
+        kwonlyargs=[],
+        kw_defaults=[],
+        defaults=[]),
+      body=[
+        Assign(
+          targets=[
+            Name(id='mod', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='tvm', ctx=Load()),
+              attr='IRModule',
+              ctx=Load()),
+            args=[],
+            keywords=[])),
+        Assign(
+          targets=[
+            Tuple(
+              elts=[
+                Name(id='box', ctx=Store()),
+                Name(id='constructor', ctx=Store())],
+              ctx=Store())],
+          value=Call(
+            func=Name(id='initialize_box_adt', ctx=Load()),
+            args=[
+              Name(id='mod', ctx=Load())],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='box_unit', ctx=Store())],
+          value=Call(
+            func=Name(id='constructor', ctx=Load()),
+            args=[
+              Call(
+                func=Attribute(
+                  value=Name(id='relay', ctx=Load()),
+                  attr='Tuple',
+                  ctx=Load()),
+                args=[
+                  List(elts=[], ctx=Load())],
+                keywords=[])],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='box_constant', ctx=Store())],
+          value=Call(
+            func=Name(id='constructor', ctx=Load()),
+            args=[
+              Call(
+                func=Attribute(
+                  value=Name(id='relay', ctx=Load()),
+                  attr='const',
+                  ctx=Load()),
+                args=[
+                  Constant(value=0),
+                  Constant(value='float32')],
+                keywords=[])],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='ut', ctx=Store())],
+          value=Call(
+            func=Name(id='run_infer_type', ctx=Load()),
+            args=[
+              Name(id='box_unit', ctx=Load()),
+              Name(id='mod', ctx=Load())],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='ct', ctx=Store())],
+          value=Call(
+            func=Name(id='run_infer_type', ctx=Load()),
+            args=[
+              Name(id='box_constant', ctx=Load()),
+              Name(id='mod', ctx=Load())],
+            keywords=[])),
+        Assert(
+          test=Compare(
+            left=Attribute(
+              value=Name(id='ut', ctx=Load()),
+              attr='checked_type',
+              ctx=Load()),
+            ops=[
+              Eq()],
+            comparators=[
+              Call(
+                func=Name(id='box', ctx=Load()),
+                args=[
+                  Call(
+                    func=Attribute(
+                      value=Name(id='relay', ctx=Load()),
+                      attr='TupleType',
+                      ctx=Load()),
+                    args=[
+                      List(elts=[], ctx=Load())],
+                    keywords=[])],
+                keywords=[])])),
+        Assert(
+          test=Compare(
+            left=Attribute(
+              value=Name(id='ct', ctx=Load()),
+              attr='checked_type',
+              ctx=Load()),
+            ops=[
+              Eq()],
+            comparators=[
+              Call(
+                func=Name(id='box', ctx=Load()),
+                args=[
+                  Call(
+                    func=Attribute(
+                      value=Name(id='relay', ctx=Load()),
+                      attr='TensorType',
+                      ctx=Load()),
+                    args=[
+                      Tuple(elts=[], ctx=Load()),
+                      Constant(value='float32')],
+                    keywords=[])],
+                keywords=[])]))],
+      decorator_list=[]),
+    FunctionDef(
+      name='test_adt_match',
+      args=arguments(
+        posonlyargs=[],
+        args=[],
+        kwonlyargs=[],
+        kw_defaults=[],
+        defaults=[]),
+      body=[
+        Assign(
+          targets=[
+            Name(id='mod', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='tvm', ctx=Load()),
+              attr='IRModule',
+              ctx=Load()),
+            args=[],
+            keywords=[])),
+        Assign(
+          targets=[
+            Tuple(
+              elts=[
+                Name(id='box', ctx=Store()),
+                Name(id='constructor', ctx=Store())],
+              ctx=Store())],
+          value=Call(
+            func=Name(id='initialize_box_adt', ctx=Load()),
+            args=[
+              Name(id='mod', ctx=Load())],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='v', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='Var',
+              ctx=Load()),
+            args=[
+              Constant(value='v'),
+              Call(
+                func=Attribute(
+                  value=Name(id='relay', ctx=Load()),
+                  attr='TensorType',
+                  ctx=Load()),
+                args=[
+                  Tuple(elts=[], ctx=Load()),
+                  Constant(value='float32')],
+                keywords=[])],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='match', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='Match',
+              ctx=Load()),
+            args=[
+              Call(
+                func=Name(id='constructor', ctx=Load()),
+                args=[
+                  Call(
+                    func=Attribute(
+                      value=Name(id='relay', ctx=Load()),
+                      attr='const',
+                      ctx=Load()),
+                    args=[
+                      Constant(value=0),
+                      Constant(value='float32')],
+                    keywords=[])],
+                keywords=[]),
+              List(
+                elts=[
+                  Call(
+                    func=Attribute(
+                      value=Name(id='relay', ctx=Load()),
+                      attr='Clause',
+                      ctx=Load()),
+                    args=[
+                      Call(
+                        func=Attribute(
+                          value=Name(id='relay', ctx=Load()),
+                          attr='PatternConstructor',
+                          ctx=Load()),
+                        args=[
+                          Name(id='constructor', ctx=Load()),
+                          List(
+                            elts=[
+                              Call(
+                                func=Attribute(
+                                  value=Name(id='relay', ctx=Load()),
+                                  attr='PatternVar',
+                                  ctx=Load()),
+                                args=[
+                                  Name(id='v', ctx=Load())],
+                                keywords=[])],
+                            ctx=Load())],
+                        keywords=[]),
+                      Call(
+                        func=Attribute(
+                          value=Name(id='relay', ctx=Load()),
+                          attr='Tuple',
+                          ctx=Load()),
+                        args=[
+                          List(elts=[], ctx=Load())],
+                        keywords=[])],
+                    keywords=[]),
+                  Call(
+                    func=Attribute(
+                      value=Name(id='relay', ctx=Load()),
+                      attr='Clause',
+                      ctx=Load()),
+                    args=[
+                      Call(
+                        func=Attribute(
+                          value=Name(id='relay', ctx=Load()),
+                          attr='PatternWildcard',
+                          ctx=Load()),
+                        args=[],
+                        keywords=[]),
+                      Call(
+                        func=Attribute(
+                          value=Name(id='relay', ctx=Load()),
+                          attr='Tuple',
+                          ctx=Load()),
+                        args=[
+                          List(elts=[], ctx=Load())],
+                        keywords=[])],
+                    keywords=[])],
+                ctx=Load())],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='mt', ctx=Store())],
+          value=Call(
+            func=Name(id='run_infer_type', ctx=Load()),
+            args=[
+              Name(id='match', ctx=Load()),
+              Name(id='mod', ctx=Load())],
+            keywords=[])),
+        Assert(
+          test=Compare(
+            left=Attribute(
+              value=Name(id='mt', ctx=Load()),
+              attr='checked_type',
+              ctx=Load()),
+            ops=[
+              Eq()],
+            comparators=[
+              Call(
+                func=Attribute(
+                  value=Name(id='relay', ctx=Load()),
+                  attr='TupleType',
+                  ctx=Load()),
+                args=[
+                  List(elts=[], ctx=Load())],
+                keywords=[])]))],
+      decorator_list=[]),
+    FunctionDef(
+      name='test_adt_match_type_annotations',
+      args=arguments(
+        posonlyargs=[],
+        args=[],
+        kwonlyargs=[],
+        kw_defaults=[],
+        defaults=[]),
+      body=[
+        Assign(
+          targets=[
+            Name(id='mod', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='tvm', ctx=Load()),
+              attr='IRModule',
+              ctx=Load()),
+            args=[],
+            keywords=[])),
+        Assign(
+          targets=[
+            Tuple(
+              elts=[
+                Name(id='box', ctx=Store()),
+                Name(id='constructor', ctx=Store())],
+              ctx=Store())],
+          value=Call(
+            func=Name(id='initialize_box_adt', ctx=Load()),
+            args=[
+              Name(id='mod', ctx=Load())],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='tt', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='TensorType',
+              ctx=Load()),
+            args=[
+              Tuple(
+                elts=[
+                  Constant(value=2),
+                  Constant(value=2)],
+                ctx=Load()),
+              Constant(value='float32')],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='x', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='Var',
+              ctx=Load()),
+            args=[
+              Constant(value='x')],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='mv', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='Var',
+              ctx=Load()),
+            args=[
+              Constant(value='mv'),
+              Name(id='tt', ctx=Load())],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='match', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='Match',
+              ctx=Load()),
+            args=[
+              Call(
+                func=Name(id='constructor', ctx=Load()),
+                args=[
+                  Name(id='x', ctx=Load())],
+                keywords=[]),
+              List(
+                elts=[
+                  Call(
+                    func=Attribute(
+                      value=Name(id='relay', ctx=Load()),
+                      attr='Clause',
+                      ctx=Load()),
+                    args=[
+                      Call(
+                        func=Attribute(
+                          value=Name(id='relay', ctx=Load()),
+                          attr='PatternConstructor',
+                          ctx=Load()),
+                        args=[
+                          Name(id='constructor', ctx=Load()),
+                          List(
+                            elts=[
+                              Call(
+                                func=Attribute(
+                                  value=Name(id='relay', ctx=Load()),
+                                  attr='PatternVar',
+                                  ctx=Load()),
+                                args=[
+                                  Name(id='mv', ctx=Load())],
+                                keywords=[])],
+                            ctx=Load())],
+                        keywords=[]),
+                      Call(
+                        func=Attribute(
+                          value=Name(id='relay', ctx=Load()),
+                          attr='Tuple',
+                          ctx=Load()),
+                        args=[
+                          List(elts=[], ctx=Load())],
+                        keywords=[])],
+                    keywords=[])],
+                ctx=Load())],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='func', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='Function',
+              ctx=Load()),
+            args=[
+              List(
+                elts=[
+                  Name(id='x', ctx=Load())],
+                ctx=Load()),
+              Name(id='match', ctx=Load())],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='ft', ctx=Store())],
+          value=Call(
+            func=Name(id='run_infer_type', ctx=Load()),
+            args=[
+              Name(id='func', ctx=Load()),
+              Name(id='mod', ctx=Load())],
+            keywords=[])),
+        Assert(
+          test=Compare(
+            left=Attribute(
+              value=Name(id='ft', ctx=Load()),
+              attr='checked_type',
+              ctx=Load()),
+            ops=[
+              Eq()],
+            comparators=[
+              Call(
+                func=Attribute(
+                  value=Name(id='relay', ctx=Load()),
+                  attr='FuncType',
+                  ctx=Load()),
+                args=[
+                  List(
+                    elts=[
+                      Name(id='tt', ctx=Load())],
+                    ctx=Load()),
+                  Call(
+                    func=Attribute(
+                      value=Name(id='relay', ctx=Load()),
+                      attr='TupleType',
+                      ctx=Load()),
+                    args=[
+                      List(elts=[], ctx=Load())],
+                    keywords=[])],
+                keywords=[])]))],
+      decorator_list=[]),
+    FunctionDef(
+      name='test_let_polymorphism',
+      args=arguments(
+        posonlyargs=[],
+        args=[],
+        kwonlyargs=[],
+        kw_defaults=[],
+        defaults=[]),
+      body=[
+        Assign(
+          targets=[
+            Name(id='id', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='Var',
+              ctx=Load()),
+            args=[
+              Constant(value='id')],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='xt', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='TypeVar',
+              ctx=Load()),
+            args=[
+              Constant(value='xt')],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='x', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='Var',
+              ctx=Load()),
+            args=[
+              Constant(value='x'),
+              Name(id='xt', ctx=Load())],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='body', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='Tuple',
+              ctx=Load()),
+            args=[
+              List(
+                elts=[
+                  Call(
+                    func=Name(id='id', ctx=Load()),
+                    args=[
+                      Call(
+                        func=Attribute(
+                          value=Name(id='relay', ctx=Load()),
+                          attr='const',
+                          ctx=Load()),
+                        args=[
+                          Constant(value=1)],
+                        keywords=[])],
+                    keywords=[]),
+                  Call(
+                    func=Name(id='id', ctx=Load()),
+                    args=[
+                      Call(
+                        func=Attribute(
+                          value=Name(id='relay', ctx=Load()),
+                          attr='Tuple',
+                          ctx=Load()),
+                        args=[
+                          List(elts=[], ctx=Load())],
+                        keywords=[])],
+                    keywords=[])],
+                ctx=Load())],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='body', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='Let',
+              ctx=Load()),
+            args=[
+              Name(id='id', ctx=Load()),
+              Call(
+                func=Attribute(
+                  value=Name(id='relay', ctx=Load()),
+                  attr='Function',
+                  ctx=Load()),
+                args=[
+                  List(
+                    elts=[
+                      Name(id='x', ctx=Load())],
+                    ctx=Load()),
+                  Name(id='x', ctx=Load()),
+                  Name(id='xt', ctx=Load()),
+                  List(
+                    elts=[
+                      Name(id='xt', ctx=Load())],
+                    ctx=Load())],
+                keywords=[]),
+              Name(id='body', ctx=Load())],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='body', ctx=Store())],
+          value=Call(
+            func=Name(id='run_infer_type', ctx=Load()),
+            args=[
+              Name(id='body', ctx=Load())],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='int32', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='TensorType',
+              ctx=Load()),
+            args=[
+              Tuple(elts=[], ctx=Load()),
+              Constant(value='int32')],
+            keywords=[])),
+        Expr(
+          value=Call(
+            func=Attribute(
+              value=Attribute(
+                value=Name(id='tvm', ctx=Load()),
+                attr='ir',
+                ctx=Load()),
+              attr='assert_structural_equal',
+              ctx=Load()),
+            args=[
+              Attribute(
+                value=Name(id='body', ctx=Load()),
+                attr='checked_type',
+                ctx=Load()),
+              Call(
+                func=Attribute(
+                  value=Name(id='relay', ctx=Load()),
+                  attr='TupleType',
+                  ctx=Load()),
+                args=[
+                  List(
+                    elts=[
+                      Name(id='int32', ctx=Load()),
+                      Call(
+                        func=Attribute(
+                          value=Name(id='relay', ctx=Load()),
+                          attr='TupleType',
+                          ctx=Load()),
+                        args=[
+                          List(elts=[], ctx=Load())],
+                        keywords=[])],
+                    ctx=Load())],
+                keywords=[])],
+            keywords=[]))],
+      decorator_list=[]),
+    FunctionDef(
+      name='test_if',
+      args=arguments(
+        posonlyargs=[],
+        args=[],
+        kwonlyargs=[],
+        kw_defaults=[],
+        defaults=[]),
+      body=[
+        Assign(
+          targets=[
+            Name(id='choice_t', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='FuncType',
+              ctx=Load()),
+            args=[
+              List(elts=[], ctx=Load()),
+              Call(
+                func=Attribute(
+                  value=Name(id='relay', ctx=Load()),
+                  attr='scalar_type',
+                  ctx=Load()),
+                args=[
+                  Constant(value='bool')],
+                keywords=[])],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='f', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='Var',
+              ctx=Load()),
+            args=[
+              Constant(value='f'),
+              Name(id='choice_t', ctx=Load())],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='true_branch', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='Var',
+              ctx=Load()),
+            args=[
+              Constant(value='True'),
+              Call(
+                func=Attribute(
+                  value=Name(id='relay', ctx=Load()),
+                  attr='TensorType',
+                  ctx=Load()),
+                args=[
+                  List(
+                    elts=[
+                      Call(
+                        func=Name(id='Any', ctx=Load()),
+                        args=[],
+                        keywords=[]),
+                      Constant(value=1)],
+                    ctx=Load())],
+                keywords=[
+                  keyword(
+                    arg='dtype',
+                    value=Constant(value='float32'))])],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='false_branch', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='Var',
+              ctx=Load()),
+            args=[
+              Constant(value='False'),
+              Call(
+                func=Attribute(
+                  value=Name(id='relay', ctx=Load()),
+                  attr='TensorType',
+                  ctx=Load()),
+                args=[
+                  List(
+                    elts=[
+                      Call(
+                        func=Name(id='Any', ctx=Load()),
+                        args=[],
+                        keywords=[]),
+                      Call(
+                        func=Name(id='Any', ctx=Load()),
+                        args=[],
+                        keywords=[])],
+                    ctx=Load())],
+                keywords=[
+                  keyword(
+                    arg='dtype',
+                    value=Constant(value='float32'))])],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='top', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='relay', ctx=Load()),
+              attr='Function',
+              ctx=Load()),
+            args=[
+              List(
+                elts=[
+                  Name(id='f', ctx=Load()),
+                  Name(id='true_branch', ctx=Load()),
+                  Name(id='false_branch', ctx=Load())],
+                ctx=Load()),
+              Call(
+                func=Attribute(
+                  value=Name(id='relay', ctx=Load()),
+                  attr='If',
+                  ctx=Load()),
+                args=[
+                  Call(
+                    func=Name(id='f', ctx=Load()),
+                    args=[],
+                    keywords=[]),
+                  Name(id='true_branch', ctx=Load()),
+                  Name(id='false_branch', ctx=Load())],
+                keywords=[])],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='ft', ctx=Store())],
+          value=Call(
+            func=Name(id='run_infer_type', ctx=Load()),
+            args=[
+              Name(id='top', ctx=Load())],
+            keywords=[])),
+        Expr(
+          value=Call(
+            func=Attribute(
+              value=Attribute(
+                value=Name(id='tvm', ctx=Load()),
+                attr='ir',
+                ctx=Load()),
+              attr='assert_structural_equal',
+              ctx=Load()),
+            args=[
+              Attribute(
+                value=Name(id='ft', ctx=Load()),
+                attr='ret_type',
+                ctx=Load()),
+              Call(
+                func=Attribute(
+                  value=Name(id='relay', ctx=Load()),
+                  attr='TensorType',
+                  ctx=Load()),
+                args=[
+                  List(
+                    elts=[
+                      Call(
+                        func=Name(id='Any', ctx=Load()),
+                        args=[],
+                        keywords=[]),
+                      Constant(value=1)],
+                    ctx=Load())],
+                keywords=[
+                  keyword(
+                    arg='dtype',
+                    value=Constant(value='float32'))])],
+            keywords=[]))],
+      decorator_list=[]),
+    FunctionDef(
+      name='test_type_arg_infer',
+      args=arguments(
+        posonlyargs=[],
+        args=[],
+        kwonlyargs=[],
+        kw_defaults=[],
+        defaults=[]),
+      body=[
+        Assign(
+          targets=[
+            Name(id='code', ctx=Store())],
+          value=Constant(value='\n#[version = "0.0.5"]\ndef @id[A](%x: A) -> A {\n  %x\n}\ndef @main(%f: float32) -> float32 {\n  @id(%f)\n}\n')),
+        Assign(
+          targets=[
+            Name(id='mod', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Attribute(
+                value=Name(id='tvm', ctx=Load()),
+                attr='parser',
+                ctx=Load()),
+              attr='fromtext',
+              ctx=Load()),
+            args=[
+              Name(id='code', ctx=Load())],
+            keywords=[])),
+        Assign(
+          targets=[
+            Name(id='mod', ctx=Store())],
+          value=Call(
+            func=Call(
+              func=Attribute(
+                value=Name(id='transform', ctx=Load()),
+                attr='InferType',
+                ctx=Load()),
+              args=[],
+              keywords=[]),
+            args=[
+              Name(id='mod', ctx=Load())],
+            keywords=[])),
+        Expr(
+          value=Call(
+            func=Attribute(
+              value=Attribute(
+                value=Name(id='tvm', ctx=Load()),
+                attr='ir',
+                ctx=Load()),
+              attr='assert_structural_equal',
+              ctx=Load()),
+            args=[
+              Attribute(
+                value=Attribute(
+                  value=Subscript(
+                    value=Name(id='mod', ctx=Load()),
+                    slice=Constant(value='main'),
+                    ctx=Load()),
+                  attr='body',
+                  ctx=Load()),
+                attr='type_args',
+                ctx=Load()),
+              List(
+                elts=[
+                  Call(
+                    func=Attribute(
+                      value=Name(id='relay', ctx=Load()),
+                      attr='TensorType',
+                      ctx=Load()),
+                    args=[
+                      Tuple(elts=[], ctx=Load()),
+                      Constant(value='float32')],
+                    keywords=[])],
+                ctx=Load())],
+            keywords=[]))],
+      decorator_list=[])],
+  type_ignores=[])
